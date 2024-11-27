@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'LeagueSpartan';
+    src: url('fonts/LeagueSpartan-VariableFont_wght.ttf');
+}
+body{
+    margin: 0;
+    font-family: 'LeagueSpartan';
+    background-color: #101010;
+    overflow: hidden;
+}
+
+header{
+    width: 100%;
+    height: 112px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#header-logo{
+    margin-left: 80px;
+    font-weight: bolder;
+    font-size: 44pt;
+    color: var(--red);
+}
+#header-logo .highlight{
+    color: #fff;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+nav ul li{
+    margin: 0 18px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 18pt;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+nav ul li a:hover{
+    text-decoration: underline;
+}
+
+.buttons{
+    margin-right: 80px;
+}
+.buttons .btn{
+    border: none;
+    cursor: pointer;
+    height: 48px;
+    width: 114px;
+    margin-left: 14px;
+    font-size: 12pt;
+    font-weight: bolder;
+}
+.buttons .btn.login{
+    background: var(--gray);
+    color: white;
+    border-radius: 8px;
+}
+.buttons .btn.register{
+    background: var(--red);
+    color: white;
+    border-radius: 8px;
+}
+
+#header-gradient{
+    width: 100%;
+    height: 16px;
+    background: linear-gradient(0deg, rgba(2,0,36,0) 0%, rgba(0,0,0,1) 100%);
+}
+
+svg{
+    fill: #FFF;
+    max-height: 30px;
+    margin-bottom: 12px;
+}
