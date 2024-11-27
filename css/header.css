@@ -8,6 +8,10 @@ body{
     background-color: #101010;
     overflow: hidden;
 }
+h2{
+    color: #FFF;
+    font-size: 36pt;
+}
 
 header{
     width: 100%;
@@ -81,4 +85,21 @@ svg{
     fill: #FFF;
     max-height: 30px;
     margin-bottom: 12px;
+}
+.header-icon{
+    max-height: 30px;
+    margin-bottom: 12px;
+}
+.header-separator{
+    width: 32px;
+}
+.arrow-separator{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 30px;
+}
+
+.disabled-icon{
+    opacity: 40%;
 }
