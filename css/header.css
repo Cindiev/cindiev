@@ -30,6 +30,10 @@ header{
 #header-logo .highlight{
     color: #fff;
 }
+#header-icon{
+    width: 80px;
+    margin-left: 120px;
+}
 
 nav ul{
     list-style: none;
@@ -71,6 +75,18 @@ nav ul li a:hover{
 }
 .buttons .btn.register{
     background: var(--red);
+    color: white;
+    border-radius: 8px;
+}
+.buttons .btn.user{
+    background: var(--gray);
+    border: none;
+    cursor: pointer;
+    height: 48px;
+    width: 50px;
+    margin-left: 14px;
+    font-size: 12pt;
+    font-weight: bolder;
     color: white;
     border-radius: 8px;
 }

@@ -15,21 +15,23 @@
 </head>
 <body>
     <header>
-        <div id="header-logo">CINDIE<span class="highlight">V</span></div>
+        <img id="header-icon" src="assets/svg/logo_white.svg">
+        <!--
+        <div id="header-logo"><span class="highlight"></span></div>
+        -->
         <nav>
             <ul>
-                <li><a href="#"><img class="header-icon" src="assets/svg/movie.svg" alt="Ticket">Funciones</a></li>
-                    <div class="arrow-separator disabled-icon"><img class="header-separator" src="assets/svg/arrow.svg" alt="Ticket"></div>
+                <li><a href="#"><img class="header-icon" src="assets/svg/movie.svg" alt="Movies">Funciones</a></li>
+                    <div class="arrow-separator disabled-icon"><img class="header-separator" src="assets/svg/arrow.svg" alt="Separator"></div>
                 <li class="disabled-icon"><a href="#"><img class="header-icon" src="assets/svg/ticket.svg" alt="Ticket">Tickets</a></li>
+                    <div class="arrow-separator disabled-icon"><img class="header-separator" src="assets/svg/arrow.svg" alt="Separator"></div>
+                <li class="disabled-icon"><a href="#"><img class="header-icon" src="assets/svg/food.svg" alt="Food">Alimentos</a></li>
                     <div class="arrow-separator disabled-icon"><img class="header-separator" src="assets/svg/arrow.svg" alt="Ticket"></div>
-                <li class="disabled-icon"><a href="#"><img class="header-icon" src="assets/svg/food.svg" alt="Ticket">Alimentos</a></li>
-                    <div class="arrow-separator disabled-icon"><img class="header-separator" src="assets/svg/arrow.svg" alt="Ticket"></div>
-                <li class="disabled-icon"><a href="#"><img class="header-icon" src="assets/svg/money.svg" alt="Ticket">Pago</a></li>
+                <li class="disabled-icon"><a href="#"><img class="header-icon" src="assets/svg/money.svg" alt="Payment">Pago</a></li>
             </ul>
         </nav>
         <div class="buttons">
-            <button class="btn login">Ingresar</button>
-            <button class="btn register">Registrarse</button>
+            <button class="btn user">-</button>
         </div>
     </header>
     <div id="header-gradient"></div>
@@ -37,16 +39,44 @@
         <div class="content-gradient"></div>
         <div class="content">
             <div class="billboard-container">
-                <h2>Ver Cartelera</h2>
+                <h2 id="billboard-title">Ver Cartelera</h2>
                 <div class="floating-container">
                     Selecciona tu cine
+                    <div class="floating-selector"></div>
+                    <div class="floating-text2 gray-text">¿No encuentras tu cine?</div>
                 </div>
                 <div class="floating-container">
                     Selecciona el día
+                    <div class="floating-selector">
+                        13 de Noviembre
+                    </div>
                 </div>
             </div>
-            <div class="movie-container">
-                
+            <div class="movie-billboard-container">
+                <div class="movie-item">
+                    <div class="movie-image">
+                        <img src="assets/movies/angela.png" alt="">
+                    </div>
+                    <div class="movie-info">
+                        <div class="movie-title">Angela in the Mirror</div>
+                        <div class="movie-details gray-text">60 min ESP</div>
+                    </div>
+                    <div class="movie-schedule">
+                        <div class="schedule-item">10:30</div>
+                        <div class="schedule-item">11:00</div>
+                        <div class="schedule-item">14:50</div>
+                        <div class="schedule-item">10:30</div>
+                        <div class="schedule-item">11:00</div>
+                        <div class="schedule-item">14:50</div>
+                        <div class="schedule-item">16:00</div>
+                        <div class="schedule-item">16:50</div>
+                        <div class="schedule-item">18:00</div>
+
+                    </div>
+                </div>
+
+
+
             </div>
             <div class="tentacle tentacle-left"></div>
             <div class="tentacle tentacle-right"></div>
