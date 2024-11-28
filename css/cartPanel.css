@@ -1,0 +1,128 @@
+
+.cart-panel{
+    position: relative;
+    float: left;
+    background: var(--solidPanel);
+    margin: 50px 0px 0px 0px;
+
+    width: 30%;
+    height: 80%;
+    border-radius: 11px;
+}
+
+.panel-header{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background: var(--graySelector);
+    border-radius: 11px 11px 0 0;
+    display: flex;
+    justify-content: center;
+}
+.panel-header img{
+    width: 80px;
+}
+
+.panel-content{
+    position: relative;
+    width: 100%;
+    height: calc(83% - 100px);
+    overflow-y: auto;
+}
+.movie-summary{
+    position: relative;
+    width: calc(100% - 180px);
+    height: 180px;
+    color: white;
+    margin-inline: 80px;
+    margin-top: 24px;
+}
+.summary-title{
+    position: relative;
+    float: left;
+    font-size: 24pt;
+    width: calc(70% - 24px);
+    margin-left: 24px;
+    height: 40%;
+}
+.movie-summary img{
+    position: relative;
+    height: 100%;
+    width: 30%;
+    float: left;
+}
+.summary-details, .summary-date{
+    position: relative;
+    opacity: 60%;
+    margin-left: 24px;
+    /*100% - margin left - image with*/
+    width: calc(100% - 24px - 30%);
+    font-size: 16pt;
+}
+.summary-details{
+    height: 50%;
+    float: left;
+}
+.summary-date{
+    float: left;
+    text-align: right;
+    height: 10%;
+}
+
+.table{
+    position: relative;
+    color: white;
+    width: 100%;
+    margin-top: 24px;
+
+}
+.table table{
+    width: calc(100% - 160px);
+    margin-inline: 80px;
+}
+.table .table-title{
+    margin-inline: 80px;
+    width: calc(100% - 160px);
+    font-size: 18pt;
+}
+
+.table tr{
+    width: 100%;
+    font-size: 14pt;
+}
+
+.table .table-price{
+    text-align: right;
+}
+.subtotal{
+    margin-top: 10px;
+}
+
+.line{
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-inline: 80px;
+    width: calc(100% - 160px);
+    background: white;
+    height: 2px;
+    opacity: 25%;
+    border-radius: 4px;
+}
+
+.panel-footer{
+    margin-inline: 80px;
+    width: calc(100% - 160px);
+    position: relative;
+    height: 17%;
+    color: white;
+}
+.footer-text.sub{
+    font-size: 14pt;
+    align-content: center;
+}
+.footer-text{
+    height: 50%;
+    font-size: 24pt;
+    align-content: top;
+    text-align: right;
+}
