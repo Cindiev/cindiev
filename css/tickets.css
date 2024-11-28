@@ -1,0 +1,83 @@
+.main-panel{
+    position: relative;
+    float: left;
+    z-index: -1;
+    background: var(--panel);
+    margin: 50px 24px 0px 140px;
+    width: 116vh;
+    height: 80%;
+    border-radius: 11px;
+}
+
+.cart-panel{
+    position: relative;
+    float: left;
+    background: var(--solidPanel);
+
+    margin: 50px 0px 0px 0px;
+
+    width: 30%;
+    height: 80%;
+    border-radius: 11px;
+}
+
+.main-panel-title{
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.main-panel-detail{
+    width: 100%;
+    height: 64%;
+    background: #252525;
+}
+
+.detail-left{
+    position: relative;
+    float: left;
+    height: 100%;
+    width: 46%;
+    margin-inline: 2%;
+    background: #434343;
+}
+.detail-right{
+    position: relative;
+    float: left;
+    height: 100%;
+    width: 46%;
+    margin-inline: 2%;
+    background: #434343;
+}
+
+.ticket-icon img{
+    height: 80px;
+}
+.ticket-icon{
+    position: relative;
+    float: left;
+    width: 20%;
+}
+.ticket-name{
+    position: relative;
+    float: left;
+    width: 40%;
+    font-size: 16pt;
+    color: white;
+}
+.ticket-price{
+    position: relative;
+    float: left;
+    width: 40%;
+    font-size: 16pt;
+    color: white;
+}
+.ticket-selector{
+    position: relative;
+    float: left;
+    background: var(--graySelector);
+    width: 80%;
+    height: 40px;
+    margin-top: 20px;
+    border-radius: 11px;
+}

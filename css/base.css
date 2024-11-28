@@ -1,0 +1,50 @@
+main{
+    position: relative;
+    /*112px: Header Height*/
+    /*16px: Gradient Height*/
+    min-height: calc(100vh - 112px - 16px);
+}
+.content{
+    position: relative;
+    height: calc(100vh - 128px);
+    width: 100%;
+}
+
+.content-gradient{
+    position: fixed;
+    float: left;
+    height: 100%;
+    background: linear-gradient(270deg, rgb(16 16 16) 0%, rgba(0, 0, 0, 1) 100%);
+    width: 60%;
+    margin-top: -20px;
+    z-index: -1;
+}
+
+.tentacle {
+    position: absolute;
+}  
+
+.tentacle-left{
+    width: 748px;
+    height: 420px;
+    top: 2px;
+    left: -270px;
+    z-index: -1;
+    background-size: cover;
+    background-image: url(../assets/tentacle_1.png);
+    transform: rotate(265deg) scale(0.7);
+    opacity: 11%;
+}
+
+.tentacle-right{
+    position: absolute;
+    width: 748px;
+    height: 420px;
+    bottom: -10vh;
+    right: -250px;
+    z-index: 0;
+    background-size: cover;
+    background-image: url(../assets/tentacle_2.png);
+    transform: rotate(0deg) scale(0.4);
+    opacity: 11%;
+}
