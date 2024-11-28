@@ -48,3 +48,10 @@ main{
     transform: rotate(0deg) scale(0.4);
     opacity: 11%;
 }
+
+.ticket-selector{
+    text-align: center;
+    align-content: center;
+    color: white;
+    font-size: 16pt;
+}
