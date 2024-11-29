@@ -1,0 +1,431 @@
+.main-panel{
+    width: 86vw;
+}
+.main-panel-detail{
+    height: 80%
+}
+
+.purchase-container{
+    position: relative;
+    float: left;
+    width: 70%;
+    height: 100%;
+}
+.purchase-details{
+    position: relative;
+    float: left;
+    width: 30%;
+    height: 100%;
+    overflow-y: auto;
+    margin-top: -55px;
+}
+
+.table-main-title{
+    margin-inline: 80px;
+    width: calc(100% - 160px);
+    font-size: 18pt;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.main-panel-title-left{
+    position: relative;
+    width: 89%;
+    padding-left: 180px;
+    text-align: left;
+    margin-top: 60px;
+}
+
+.purchase{
+    position: relative;
+    margin-inline: 220px;
+    width: calc(100% - 2*220px);
+    height: 100%;
+}
+.purchase-title{
+    position: relative;
+    width: 100%;
+    color: white;
+    font-size: 20pt;
+    margin-bottom: 12px;
+    height: 24px;
+}
+.purchase-movie{
+    position: relative;
+    float: left;
+    width: 100%;
+    width: calc(100% - 250px - 24px);
+    height: 70%;
+}
+.purchase-movie div{
+    margin-bottom: 16px;
+}
+.purchase img{
+    position: relative;
+    float: left;
+    width: 250px;
+    margin-right: 24px;
+}
+.purchase-movie-title{
+    position: relative;
+    float: left;
+    width: calc(100%);
+    color: white;
+    font-size: 20pt;
+}
+.purchase-movie-details{
+    position: relative;
+    float: left;
+    width: calc(100%);
+    color: var(--graySelector);
+    font-size: 14pt;
+}
+.purchase-movie-location{
+    position: relative;
+    float: left;
+    width: calc(100%);
+    color: white;
+    font-size: 14pt;
+}
+.purchase-scheduled-time{
+    position: relative;
+    float: left;
+    width: calc(100%);
+    color: white;
+    font-size: 28pt;
+    font-weight: 700;
+    padding-bottom: 24px;
+}
+
+.purchase-summary-item{
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-size: 20pt;
+    font-weight: 700;
+    align-content: center;
+}
+.purchase-summary-item img{
+    width: 50px;
+}
+.purchase-summary-image{
+    margin-right: 120px;
+}
+.purchase-summary-title{
+    position: relative;
+    height: 100%;
+    align-content: center;
+}
+.purchase-summary-total{
+    font-weight: 300;
+}
+
+
+.purchase-taxes{
+    margin-top: 65px;
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-size:  14pt;
+    font-weight: 100;
+    align-content: center;
+}
+
+.purchase-total{
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-size:  24pt;
+    font-weight: 400;
+    align-content: center;
+}
+
+.purchase-action{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.purchase-action button{
+    margin-top: 48px;
+
+    border: 1px solid rgba(255, 255, 255, 0);
+    cursor: pointer;
+    height: 48px;
+    width: 214px;
+    margin-left: 14px;
+    font-weight: bolder;
+
+    background: var(--red);
+    color: white;
+    border-radius: 8px;
+
+    transition: 150ms;
+}
+
+.purchase-action button:hover{
+    background: #ff2525;
+    border: 1px solid white;
+    transition: 150ms;
+}
+
+.purchase{
+    display: none;
+}
+.payment{
+    display: none;
+}
+
+.payment{
+    position: relative;
+    margin-inline: 280px;
+    margin-left: 350px;
+    width: calc(100% - 2*280px);
+    height: 100%;
+    margin-top: 20px;
+}
+.payment-title{
+    position: relative;
+    width: 100%;
+    font-size: 18pt;
+    color: white;
+}
+.payment-buttons{
+    margin-top: 12px;
+    position: relative;
+    width: 100%;
+    height: 190px;
+    display: flex;
+    column-gap: 16px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.payment-button{
+    background-color: var(--solidPanel);
+    width: 120px;
+    height: 80px;
+    border-radius: 11px;
+    transition: 150ms;
+}
+
+.payment-button:hover{
+    background-color: #6e6e6e;
+    cursor: pointer;
+    transition: 150ms;
+}
+
+.payment-selector{
+    position: relative;
+    width: 90%;
+    height: 40px;
+    margin-top: 24px;
+
+}
+#payment{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-family: 'LeagueSpartan';
+    font-size: 14pt;
+    font-weight: 700;
+    background: #454545;
+    color: white;
+    border: none;
+    border-radius: 11px;
+    padding: 10px;
+    transform: 150ms;
+}
+#payment:hover{
+    cursor: pointer;
+    background: #5e5e5e;
+    transform: 150ms;
+}
+
+.payment-mail{
+    color: var(--graySelector);
+    font-size: 14pt;
+    padding: 24px 0;
+}
+
+#paybtn{
+    margin-top: 48px;
+
+    border: 1px solid rgba(255, 255, 255, 0);
+    cursor: pointer;
+    height: 48px;
+    width: 114px;
+    font-weight: bolder;
+    background: var(--red);
+    color: white;
+    border-radius: 8px;
+
+    transition: 150ms;
+
+}
+
+#paybtn:hover{
+    background: #ff2525;
+    border: 1px solid white;
+    transition: 150ms;
+}
+
+
+
+
+
+
+
+.completion{
+    position: relative;
+    margin-inline: 220px;
+    width: calc(100% - 2*220px);
+    height: 100%;
+}
+
+.completion-title{
+    position: relative;
+    width: 100%;
+    padding: 24px 0px;
+    font-size: 16pt;
+    color: white;
+}
+.completion img{
+    position: relative;
+    float: left;
+    height: 240px;
+}
+
+.completion-details{
+    position: relative;
+    float: left;
+    margin-left: 24px;
+    width: calc(100% - 165px - 24px);
+    height: 240px;
+}
+.completion-details img{
+    margin-top: -26px;
+    margin-inline: -10px;
+}
+
+.comp-movie{
+    position: relative;
+    float: left;
+    color: white;
+    font-size: 16pt;
+    width: 78%;
+}
+.comp-movie div{
+    position: relative;
+    float: right;
+    text-align: right;
+    color: var(--graySelector);
+    font-size: 16pt;
+}
+
+.completion-actions{
+    position: relative;
+    margin: 24px 0;
+    float: left;
+    width: 100%;
+    font-size: 20pt;
+    color: var(--graySelector);
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.actions-title:hover{
+    text-decoration: underline;
+}
+
+.actions-title{
+    cursor: pointer;
+    position: relative;
+    float: left;
+    width: 50%;
+    text-align: right;
+    height: 100%;
+}
+
+.completion-actions img{
+    position: relative;
+    float: left;
+    width: 80px;
+    height: 40px;
+    opacity: 50%;
+    cursor: pointer;
+}
+.completion-actions img:hover{
+    opacity: 100%;
+}
+
+#endbtn{
+    margin-top: 48px;
+
+    border: 1px solid rgba(255, 255, 255, 0);
+    cursor: pointer;
+    height: 48px;
+    width: 114px;
+    font-weight: bolder;
+    background: var(--red);
+    color: white;
+    border-radius: 8px;
+
+    transition: 150ms;
+
+}
+#endbtn:hover{
+    background: #ff2525;
+    border: 1px solid white;
+    transition: 150ms;
+}
+
+
+.ticket-end-title{
+    position: absolute;
+    top: 55px;
+    left: 140px;
+    color: white;
+    font-size: 16pt;
+    font-weight: 100;
+}
+.ticket-end-time{
+    position: absolute;
+    top: 80px;
+    left: 140px;
+    color: white;
+    font-size: 16pt;
+    font-weight: 100;
+}
+
+.ticket-end-place{
+    position: absolute;
+    top: 150px;
+    left: 140px;
+    color: white;
+    font-size: 16pt;
+    font-weight: 100;
+}
+
+.ticket-end-logo{
+    position: absolute;
+    top: 0px;
+    left: -100px;
+    width: 70px;
+}

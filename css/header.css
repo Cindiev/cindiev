@@ -92,7 +92,10 @@ nav ul li a:hover{
     color: white;
     border-radius: 8px;
 }
-
+button{
+    font-family: 'LeagueSpartan';
+    font-size: 13pt;
+}
 #header-gradient{
     width: 100%;
     height: 16px;

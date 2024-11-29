@@ -37,3 +37,34 @@ h2{
 .main-panel-detail{
     position: relative;
 }
+.main-panel-footer{
+    position: relative;
+    height: calc(36% - 116px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer-elements{
+    position: relative;
+    float: left;
+    width: 70%;
+    height: 100%;
+    align-content: center;
+    color: white;
+}
+
+.buttons{
+    position: relative;
+    float: left;
+    width: 10%;
+}
+
+.color{
+    position: relative;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 20px;
+    font-weight: 300;
+}
