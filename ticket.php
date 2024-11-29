@@ -81,7 +81,7 @@
                     </div>
                 </div>
                 <div class="main-panel-footer">
-                    <div class="footer-text">Total de entradas: 8</div>
+                    <div id="total-tickets" class="footer-text">Total de entradas: 0</div>
                     <div class="buttons">
                         <button id="continuar-tickets">Continuar</button>
                     </div>
@@ -102,38 +102,22 @@
                         <div class="table-title">Tickets</div>
                         <div class="line"></div>
                         <table>
-                            <tr>
-                                <td>Adulto</td>
-                                <td>x4</td>
-                                <td class="table-price">$240</td>
-                            </tr>
-                            <tr>
-                                <td>Niño</td>
-                                <td>x3</td>
-                                <td class="table-price">$90</td>
-                            </tr>
-                            <tr>
-                                <td>3ra Edad</td>
-                                <td>x1</td>
-                                <td class="table-price">$30</td>
-                            </tr>
-                            <tr>
-                                <td class="subtotal">Subtotal</td>
-                                <td></td>
-                                <td class="table-price">$360</td>
-                            </tr>
+                            <tbody>
+                                <!-- Las filas se generarán dinámicamente desde tickets.js -->
+                            </tbody>
                         </table>
                     </div>
                 </div>
 
                 <div class="panel-footer">
-                    <div class="footer-text sub">
-                        Impuestos: $54
+                    <div id="taxes-value" class="footer-text sub">
+                        Impuestos: $0
                     </div>
-                    <div class="footer-text">
-                        Total: $360
+                    <div id="total-value" class="footer-text">
+                        Total: $0
                     </div>
                 </div>
+
             </div>
 
             <div class="tentacle tentacle-left"></div>

@@ -19,7 +19,7 @@
         <nav>
             <ul>
                 <li><a href="#">Inicio</a></li>
-                <li><a href="#">Funciones</a></li>
+                <li><a href="agendar.php">Funciones</a></li>
                 <li><a href="#">Alimentos</a></li>
                 <li><a href="#">Eventos</a></li>
             </ul>

@@ -141,6 +141,8 @@
     align-content: center;
     font-weight: 700;
     cursor: pointer;
+    user-select: none;
+    transition: 150ms;
 }
 .selector-value{
     position: relative;
@@ -160,7 +162,19 @@
     align-content: center;
     font-weight: 700;
     cursor: pointer;
+    transition: 150ms;
+    user-select: none;
 }
+.plus-button:hover, .minus-button:hover{
+    background: #afafaf;
+    color: #373737;
+    transition: 150ms;
+}
+.plus-button:active, .minus-button:active{
+    background: #dddddd;
+    color: #1c1c1c;
+}
+
 .main-panel-footer{
     width: 100%;
     position: relative;

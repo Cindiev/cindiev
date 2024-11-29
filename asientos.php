@@ -1,47 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CINDIEV</title>
-
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/tickets.css">
     <link rel="stylesheet" href="css/asientos.css">
-    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/cartPanel.css">
+    <script src="js/asientos.js"></script>
 
-
-    <link rel="stylesheet" href="css/variables.css">
-
-    <link rel="icon" href="assets/cindiev_logo_white.png">
-</head>
-<body>
-    <header>
-        <img id="header-icon" src="assets/svg/logo_white.svg">
-        <!--
-        <div id="header-logo"><span class="highlight"></span></div>
-        -->
-        <nav>
-            <ul>
-                <li class="disabled-icon"><a href="#"><img class="header-icon" src="assets/svg/movie.svg" alt="Movies">Funciones</a></li>
-                    <div class="arrow-separator disabled-icon"><img class="header-separator" src="assets/svg/arrow.svg" alt="Separator"></div>
-                <li><a href="#"><img class="header-icon" src="assets/svg/ticket.svg" alt="Ticket">Tickets</a></li>
-                    <div class="arrow-separator disabled-icon"><img class="header-separator" src="assets/svg/arrow.svg" alt="Separator"></div>
-                <li class="disabled-icon"><a href="#"><img class="header-icon" src="assets/svg/food.svg" alt="Food">Alimentos</a></li>
-                    <div class="arrow-separator disabled-icon"><img class="header-separator" src="assets/svg/arrow.svg" alt="Ticket"></div>
-                <li class="disabled-icon"><a href="#"><img class="header-icon" src="assets/svg/money.svg" alt="Payment">Pago</a></li>
-            </ul>
-        </nav>
-        <div class="buttons">
-            <button class="btn user">-</button>
-        </div>
-    </header>
-    <div id="header-gradient"></div>
-    <main>
+    <main onload="init()">
         <div class="content-gradient"></div>
-        <div class="content">
+        <div class="content" id="content-panel" data-name="<?php echo $page; ?>">
             <div class="main-panel">
                 <div class="main-panel-title">
                     <div class="return">
@@ -162,7 +125,7 @@
                         </div>
                     </div>
                     <div class="buttons">
-                        <button class="btn register">Continuar</button>
+                        <button id="continuar-asientos">Continuar</button>
                     </div>
                 </div>
             </div>

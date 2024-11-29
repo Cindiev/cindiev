@@ -10,6 +10,11 @@ document.addEventListener("DOMContentLoaded", function () {
             var navItem = document.getElementById("tickets-nav");
             navItem.classList.remove('disabled-icon');
             break;
+        case 'asientos':
+            var navItem = document.getElementById("tickets-nav");
+            navItem.classList.remove('disabled-icon');
+            console.log("asientos");
+            break;
         case 'alimentos':
             var navItem = document.getElementById("food-nav");
             navItem.classList.remove('disabled-icon');

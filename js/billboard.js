@@ -1,16 +1,9 @@
-function init(){
+function init() {
     createFunctions();
 }
 
-function createFunctions(){
-    /*
-    var container = document.getElementById("movies");
-    var newMovie = document.createElement('div')
-    newMovie.className = "movie-item";
-*/
-     
+function createFunctions() {
     const parent = document.getElementById("movies");
-
 
     // Crear elementos basados en los datos
     moviesData.forEach(movie => {
@@ -50,15 +43,19 @@ function createFunctions(){
             // Agregar event listener para capturar la película y el horario seleccionado
             scheduleItem.addEventListener('click', function (event) {
                 event.preventDefault(); // Evita redirección automática
-                selectedMovie = {
+                
+                const selectedMovie = {
                     title: movie.title,
                     details: movie.details,
                     schedule: schedule
                 };
-                console.log("Película seleccionada:", selectedMovie);
-                // Redirigir manualmente con la información en la URL
-                const encodedTitle = encodeURIComponent(movie.title); // Escapa el título para la URL
-                window.location.href = `${scheduleItem.href}&time=${schedule}&title=${encodedTitle}`;
+
+                // Guardar datos en localStorage
+                localStorage.setItem('selectedMovie', JSON.stringify(selectedMovie));
+                console.log("Película seleccionada guardada en localStorage:", selectedMovie);
+
+                // Redirigir manualmente a la sección de tickets
+                window.location.href = scheduleItem.href;
             });
 
             movieSchedule.appendChild(scheduleItem);

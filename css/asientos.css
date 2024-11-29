@@ -68,3 +68,22 @@ h2{
     height: 20px;
     font-weight: 300;
 }
+
+
+#continuar-asientos{
+    margin-left: 14px;
+    border: 1px solid rgba(255, 255, 255, 0);
+    cursor: pointer;
+    height: 48px;
+    width: 114px;
+    font-weight: bolder;
+    background: var(--red);
+    color: white;
+    border-radius: 8px;
+    transition: 150ms;
+}
+#continuar-asientos:hover{
+    background: #ff2525;
+    border: 1px solid white;
+    transition: 150ms;
+}
