@@ -1,46 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CINDIEV</title>
-
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/tickets.css">
-    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/cartPanel.css">
+    <script src="js/tickets.js"></script>
 
-
-    <link rel="stylesheet" href="css/variables.css">
-
-    <link rel="icon" href="assets/cindiev_logo_white.png">
-</head>
-<body>
-    <header>
-        <img id="header-icon" src="assets/svg/logo_white.svg">
-        <!--
-        <div id="header-logo"><span class="highlight"></span></div>
-        -->
-        <nav>
-            <ul>
-                <li class="disabled-icon"><a href="#"><img class="header-icon" src="assets/svg/movie.svg" alt="Movies">Funciones</a></li>
-                    <div class="arrow-separator disabled-icon"><img class="header-separator" src="assets/svg/arrow.svg" alt="Separator"></div>
-                <li><a href="#"><img class="header-icon" src="assets/svg/ticket.svg" alt="Ticket">Tickets</a></li>
-                    <div class="arrow-separator disabled-icon"><img class="header-separator" src="assets/svg/arrow.svg" alt="Separator"></div>
-                <li class="disabled-icon"><a href="#"><img class="header-icon" src="assets/svg/food.svg" alt="Food">Alimentos</a></li>
-                    <div class="arrow-separator disabled-icon"><img class="header-separator" src="assets/svg/arrow.svg" alt="Ticket"></div>
-                <li class="disabled-icon"><a href="#"><img class="header-icon" src="assets/svg/money.svg" alt="Payment">Pago</a></li>
-            </ul>
-        </nav>
-        <div class="buttons">
-            <button class="btn user">-</button>
-        </div>
-    </header>
-    <div id="header-gradient"></div>
-    <main>
+    <main onload="init()">
         <div class="content-gradient"></div>
-        <div class="content">
+        <div class="content" id="content-panel" data-name="<?php echo $page; ?>">
             <div class="main-panel">
                 <div class="main-panel-title">
                     <div class="return">
@@ -50,8 +14,6 @@
                 </div>
                 <div class="main-panel-detail">
                     <div class="detail-left">
-
-
 
                         <div class="ticket-item">
                             <div class="ticket-icon">
@@ -68,8 +30,6 @@
                             </div>
                         </div>
 
-
-
                         <div class="ticket-item">
                             <div class="ticket-icon">
                                 <img src="assets/svg/ticket_buy.svg" alt="">
@@ -84,8 +44,6 @@
                                 </div>    
                             </div>
                         </div>
-
-
 
                         <div class="ticket-item">
                             <div class="ticket-icon">
@@ -125,7 +83,7 @@
                 <div class="main-panel-footer">
                     <div class="footer-text">Total de entradas: 8</div>
                     <div class="buttons">
-                        <button class="btn register">Continuar</button>
+                        <button id="continuar-tickets">Continuar</button>
                     </div>
                 </div>
             </div>
@@ -136,9 +94,9 @@
                 <div class="panel-content">
                     <div class="movie-summary">
                         <img src="assets/movies/huerfanas.jpg">
-                        <div class="summary-title">Orphans of the Storm</div>
+                        <div id="selected-title" class="summary-title"></div>
                         <div class="summary-details">60 min ESP</div>
-                        <div class="summary-date">16:50 PM</div>
+                        <div id="selected-time" class="summary-date"></div>
                     </div>
                     <div class="table">
                         <div class="table-title">Tickets</div>
@@ -163,48 +121,6 @@
                                 <td class="subtotal">Subtotal</td>
                                 <td></td>
                                 <td class="table-price">$360</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="table">
-                        <div class="table-title">Tickets</div>
-                        <div class="line"></div>
-                        <table>
-                            <tr>
-                                <td>Adulto</td>
-                                <td>x4</td>
-                                <td class="table-price">$240</td>
-                            </tr>
-                            <tr>
-                                <td>Niño</td>
-                                <td>x3</td>
-                                <td class="table-price">$90</td>
-                            </tr>
-                            <tr>
-                                <td>3ra Edad</td>
-                                <td>x1</td>
-                                <td class="table-price">$30</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="table">
-                        <div class="table-title">Tickets</div>
-                        <div class="line"></div>
-                        <table>
-                            <tr>
-                                <td>Adulto</td>
-                                <td>x4</td>
-                                <td class="table-price">$240</td>
-                            </tr>
-                            <tr>
-                                <td>Niño</td>
-                                <td>x3</td>
-                                <td class="table-price">$90</td>
-                            </tr>
-                            <tr>
-                                <td>3ra Edad</td>
-                                <td>x1</td>
-                                <td class="table-price">$30</td>
                             </tr>
                         </table>
                     </div>

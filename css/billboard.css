@@ -112,6 +112,7 @@
 }
 
 .schedule-item{
+    text-decoration: none;
     cursor: pointer;
     color: white;
     background: #000000;
@@ -121,9 +122,11 @@
     align-content: center;
     flex: 1 0 25%;
     border-radius: 4px;
+    max-width: 25%;
 }
 
 .schedule-item:hover{
     background: #202020;
     transition: 100ms;
 }
+

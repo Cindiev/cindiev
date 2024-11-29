@@ -188,3 +188,24 @@
     width: 40%;
 }
 
+
+#continuar-tickets{
+    margin-left: 14px;
+
+    border: 1px solid rgba(255, 255, 255, 0);
+    cursor: pointer;
+    height: 48px;
+    width: 114px;
+    font-weight: bolder;
+    background: var(--red);
+    color: white;
+    border-radius: 8px;
+
+    transition: 150ms;
+
+}
+#continuar-tickets:hover{
+    background: #ff2525;
+    border: 1px solid white;
+    transition: 150ms;
+}
