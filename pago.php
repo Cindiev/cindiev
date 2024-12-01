@@ -91,58 +91,41 @@
                             <div class="table-main-title">Detalle de la compra</div>
                             <div class="table-title">Tickets</div>
                             <div class="line"></div>
-                            <table>
-                                <tr>
-                                    <td>Adulto</td>
-                                    <td>x4</td>
-                                    <td class="table-price">$240</td>
-                                </tr>
-                                <tr>
-                                    <td>Niño</td>
-                                    <td>x3</td>
-                                    <td class="table-price">$90</td>
-                                </tr>
-                                <tr>
-                                    <td>3ra Edad</td>
-                                    <td>x1</td>
-                                    <td class="table-price">$30</td>
-                                </tr>
-                                <tr>
-                                    <td class="subtotal">Subtotal</td>
-                                    <td></td>
-                                    <td class="table-price">$360</td>
-                                </tr>
-                            </table>
+                            <tbody>
+                                <!-- Las filas se generarán dinámicamente -->
+                            </tbody>
                         </div>
 
 
                         <div class="table">
-                            <div class="table-title">Asientos</div>
-                            <div class="line"></div>
+                        <div class="table-title">Asientos</div>
+                        <div class="line"></div>
                             <table>
-                                <tr>
-                                    <td>A1, A2, A3</td>
-                                </tr>
+                                <tbody id="seats-table">
+                                    <!-- Las filas se generarán dinámicamente -->
+                                </tbody>
                             </table>
                         </div>
+
+
                         <div class="table">
                             <div class="table-title">Alimentos</div>
                             <div class="line"></div>
                             <table>
                                 <tr>
-                                    <td>x1 Palomitas grandes</td>
-                                    <td>Mantequilla</td>
-                                    <td class="table-price">$70</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="table-price"></td>
                                 </tr>
                                 <tr>
                                     <td>x2 Soda</td>
                                     <td>Mediana</td>
-                                    <td class="table-price">$25</td>
+                                    <td class="table-price"></td>
                                 </tr>
                                 <tr>
                                     <td>x1 Nachos con queso</td>
                                     <td>Jalapeños</td>
-                                    <td class="table-price">$25</td>
+                                    <td class="table-price"></td>
                                 </tr>
                             </table>
                         </div>

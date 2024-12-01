@@ -24,8 +24,13 @@ h2{
     justify-content: center;
 }
 .seats-panel img{
-    width: 66px;
-    margin-right: -35px;
+    width: 49px;
+    margin-right: -18px;
+    position: relative;
+    cursor: pointer;
+}
+.seats-panel img:hover{
+    filter: invert(0.4) sepia(1) saturate(3) hue-rotate(312deg);
 }
 .seat-box{
     position: relative;

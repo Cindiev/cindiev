@@ -23,23 +23,50 @@ function loadData() {
 
 function addLocalStorage() {
     document.getElementById('continuar-tickets').addEventListener('click', () => {
-        const selectedTickets = {
-            movie: {
-                title: document.getElementById('selected-title').textContent,
-                details: document.querySelector('.summary-details').textContent,
-                time: document.getElementById('selected-time').textContent,
-            },
-            tickets: Array.from(document.querySelectorAll('.ticket-item')).map(item => ({
-                type: item.querySelector('.ticket-name').textContent,
-                quantity: parseInt(item.querySelector('.selector-value').textContent),
-                price: parseInt(item.querySelector('.ticket-price').textContent.replace('$', ''))
-            }))
+        // Obtenemos la información de la película
+        const selectedMovie = {
+            title: document.getElementById('selected-title').textContent,
+            details: document.querySelector('.summary-details').textContent,
+            time: document.getElementById('selected-time').textContent,
         };
 
-        localStorage.setItem('selectedTickets', JSON.stringify(selectedTickets));
+        // Obtenemos los tickets seleccionados
+        const selectedTickets = Array.from(document.querySelectorAll('.ticket-item')).map(item => ({
+            type: item.querySelector('.ticket-name').textContent,
+            quantity: parseInt(item.querySelector('.selector-value').textContent),
+            price: parseInt(item.querySelector('.ticket-price').textContent.replace('$', ''))
+        }));
+
+        // Calculamos el subtotal (suma de los precios por cantidad)
+        let subtotal = 0;
+        selectedTickets.forEach(ticket => {
+            subtotal += ticket.price * ticket.quantity;
+        });
+
+        // Calculamos el total (sumando impuestos)
+        const taxes = subtotal * 0.16;  // 16% de impuestos
+        const total = subtotal + taxes;
+
+        // Calculamos la cantidad total de tickets
+        const totalTickets = selectedTickets.reduce((total, ticket) => total + ticket.quantity, 0);
+
+        // Almacenamos toda la información en localStorage
+        const ticketData = {
+            movie: selectedMovie,
+            tickets: selectedTickets,
+            subtotal: subtotal,
+            taxes: taxes,
+            total: total,
+            totalTickets: totalTickets
+        };
+
+        localStorage.setItem('selectedTickets', JSON.stringify(ticketData));
+
+        // Redirigimos a la página de asientos
         window.location.href = 'agendar.php?p=asientos';
     });
 }
+
 
 function setupTicketButtons() {
     const ticketItems = document.querySelectorAll('.ticket-item');
@@ -50,22 +77,24 @@ function setupTicketButtons() {
         const selectorValue = item.querySelector('.selector-value');
         const ticketName = item.querySelector('.ticket-name').textContent;
         const ticketPrice = parseInt(item.querySelector('.ticket-price').textContent.replace('$', ''));
+        const isPromo = item.getAttribute('data-promo') === "true"; // Detecta si es promocional
 
         plusButton.addEventListener('click', () => {
             const currentValue = parseInt(selectorValue.textContent);
             selectorValue.textContent = currentValue + 1;
-            updateCartTable(ticketName, ticketPrice, parseInt(selectorValue.textContent));
+            updateCartTable(ticketName, ticketPrice, parseInt(selectorValue.textContent), isPromo);
         });
 
         minusButton.addEventListener('click', () => {
             const currentValue = parseInt(selectorValue.textContent);
             if (currentValue > 0) {
                 selectorValue.textContent = currentValue - 1;
-                updateCartTable(ticketName, ticketPrice, parseInt(selectorValue.textContent));
+                updateCartTable(ticketName, ticketPrice, parseInt(selectorValue.textContent), isPromo);
             }
         });
     });
 }
+
 
 function updateTotals() {
     const tableBody = document.querySelector('.table tbody');
@@ -110,9 +139,10 @@ function updateTotals() {
     }
 }
 
-function updateCartTable(ticketName, ticketPrice, quantity) {
+function updateCartTable(ticketName, ticketPrice, quantity, isPromo) {
     const tableBody = document.querySelector('.table tbody');
-    let row = tableBody.querySelector(`tr[data-ticket="${ticketName}"]`);
+    const ticketType = isPromo ? `${ticketName} (Promo)` : ticketName; // Diferenciar los tickets promocionales
+    let row = tableBody.querySelector(`tr[data-ticket="${ticketType}"]`);
 
     if (quantity === 0) {
         if (row) {
@@ -121,9 +151,9 @@ function updateCartTable(ticketName, ticketPrice, quantity) {
     } else {
         if (!row) {
             row = document.createElement('tr');
-            row.setAttribute('data-ticket', ticketName);
+            row.setAttribute('data-ticket', ticketType);
             row.innerHTML = `
-                <td>${ticketName}</td>
+                <td>${ticketType}</td>
                 <td class="ticket-quantity">x${quantity}</td>
                 <td class="table-price">$${ticketPrice * quantity}</td>
             `;

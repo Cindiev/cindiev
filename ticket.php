@@ -63,21 +63,22 @@
                     <div class="detail-right">
                         <div class="ticket-title">Promoción</div>
 
-                        <div class="ticket-item">
+                        <div class="ticket-item" data-promo="true">
                             <div class="ticket-icon">
                                 <img src="assets/svg/ticket_buy.svg" alt="">
                             </div>
                             <div class="ticket-details">
-                                <div class="ticket-name">3ra Edad</div>
-                                <div class="ticket-price">$30</div>
-                                <div class="ticket-promo-name">+1 Dona glaseada</div>    
+                                <div class="ticket-name">Adulto D</div>
+                                <div class="ticket-price">$65</div>
+                                <div class="ticket-promo-name">+1 Dona glaseada</div>
                                 <div class="ticket-selector">
                                     <div class="minus-button">-</div>
                                     <div class="selector-value">0</div>
                                     <div class="plus-button">+</div>
-                                </div>    
+                                </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
                 <div class="main-panel-footer">
@@ -117,7 +118,6 @@
                         Total: $0
                     </div>
                 </div>
-
             </div>
 
             <div class="tentacle tentacle-left"></div>

@@ -376,8 +376,7 @@
 }
 
 #endbtn{
-    margin-top: 48px;
-
+    margin-top: 8px;
     border: 1px solid rgba(255, 255, 255, 0);
     cursor: pointer;
     height: 48px;

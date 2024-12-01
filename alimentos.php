@@ -1,7 +1,8 @@
     <link rel="stylesheet" href="css/alimentos.css">
     <link rel="stylesheet" href="css/cartPanel.css">
+    <script src="js/alimentos.js"></script>
 
-    <main>
+    <main onload="initAlimentos()">
         <div class="content-gradient"></div>
         <div class="content" id="content-panel" data-name="<?php echo $page; ?>">
             <div class="main-panel">
@@ -45,10 +46,12 @@
                     <div class="footer-elements">
                     </div>
                     <div class="buttons">
-                        <button class="btn register">Continuar</button>
+                        <button id="continuar-pago" class="btn register">Continuar</button>
                     </div>
                 </div>
             </div>
+
+
             <div class="cart-panel">
                 <div class="panel-header">
                     <img src="assets/svg/cart.svg">
@@ -56,75 +59,37 @@
                 <div class="panel-content">
                     <div class="movie-summary">
                         <img src="assets/movies/huerfanas.jpg">
-                        <div class="summary-title">Orphans of the Storm</div>
+                        <div id="selected-title" class="summary-title"></div>
                         <div class="summary-details">60 min ESP</div>
-                        <div class="summary-date">16:50 PM</div>
+                        <div id="selected-time" class="summary-date"></div>
                     </div>
                     <div class="table">
                         <div class="table-title">Tickets</div>
                         <div class="line"></div>
                         <table>
-                            <tr>
-                                <td>Adulto</td>
-                                <td>x4</td>
-                                <td class="table-price">$240</td>
-                            </tr>
-                            <tr>
-                                <td>Niño</td>
-                                <td>x3</td>
-                                <td class="table-price">$90</td>
-                            </tr>
-                            <tr>
-                                <td>3ra Edad</td>
-                                <td>x1</td>
-                                <td class="table-price">$30</td>
-                            </tr>
-                            <tr>
-                                <td class="subtotal">Subtotal</td>
-                                <td></td>
-                                <td class="table-price">$360</td>
-                            </tr>
+                            <tbody>
+                                <!-- Las filas se generarán dinámicamente -->
+                            </tbody>
                         </table>
                     </div>
                     <div class="table">
                         <div class="table-title">Asientos</div>
                         <div class="line"></div>
                         <table>
-                            <tr>
-                                <td>A1, A2, A3</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="table">
-                        <div class="table-title">Alimentos</div>
-                        <div class="line"></div>
-                        <table>
-                            <tr>
-                                <td>x1 Palomitas grandes</td>
-                                <td>Mantequilla</td>
-                                <td class="table-price">$70</td>
-                            </tr>
-                            <tr>
-                                <td>x2 Soda</td>
-                                <td>Mediana</td>
-                                <td class="table-price">$25</td>
-                            </tr>
-                            <tr>
-                                <td>x1 Nachos con queso</td>
-                                <td>Jalapeños</td>
-                                <td class="table-price">$25</td>
-                            </tr>
+                            <tbody id="seats-table">
+                                <!-- Las filas se generarán dinámicamente -->
+                            </tbody>
                         </table>
                     </div>
 
                 </div>
 
                 <div class="panel-footer">
-                    <div class="footer-text sub">
-                        Impuestos: $54
+                    <div id="taxes-value" class="footer-text sub">
+                        Impuestos: $0
                     </div>
-                    <div class="footer-text">
-                        Total: $360
+                    <div id="total-value" class="footer-text">
+                        Total: $0
                     </div>
                 </div>
             </div>
