@@ -1,6 +1,6 @@
 function init() {
     loadData();
-    setupTicketButtons();
+    setupButtons();
     addLocalStorage();
 }
 
@@ -45,7 +45,7 @@ function addLocalStorage() {
 
         // Calculamos el total (sumando impuestos)
         const taxes = subtotal * 0.16;  // 16% de impuestos
-        const total = subtotal + taxes;
+        const total = subtotal;
 
         // Calculamos la cantidad total de tickets
         const totalTickets = selectedTickets.reduce((total, ticket) => total + ticket.quantity, 0);
@@ -63,12 +63,16 @@ function addLocalStorage() {
         localStorage.setItem('selectedTickets', JSON.stringify(ticketData));
 
         // Redirigimos a la página de asientos
+        if(totalTickets < 1){
+            alert("Advertencia: No puede continuar sin seleccionar tickets");
+            return;
+        }
         window.location.href = 'agendar.php?p=asientos';
     });
 }
 
 
-function setupTicketButtons() {
+function setupButtons() {
     const ticketItems = document.querySelectorAll('.ticket-item');
 
     ticketItems.forEach((item) => {
@@ -80,6 +84,17 @@ function setupTicketButtons() {
         const isPromo = item.getAttribute('data-promo') === "true"; // Detecta si es promocional
 
         plusButton.addEventListener('click', () => {
+            const selectedTickets = Array.from(document.querySelectorAll('.ticket-item')).map(item => ({
+                type: item.querySelector('.ticket-name').textContent,
+                quantity: parseInt(item.querySelector('.selector-value').textContent),
+                price: parseInt(item.querySelector('.ticket-price').textContent.replace('$', ''))
+            }));
+            const totalTickets = selectedTickets.reduce((total, ticket) => total + ticket.quantity, 0);
+            if(totalTickets > 9){
+                alert("Advertencia: No puedes agregar más de 10 tickets");
+                return;
+            }
+
             const currentValue = parseInt(selectorValue.textContent);
             selectorValue.textContent = currentValue + 1;
             updateCartTable(ticketName, ticketPrice, parseInt(selectorValue.textContent), isPromo);
@@ -93,6 +108,11 @@ function setupTicketButtons() {
             }
         });
     });
+
+    document.querySelector('.return').addEventListener('click', () =>{
+        window.location.href = 'agendar.php';
+    });
+
 }
 
 

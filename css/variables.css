@@ -4,4 +4,5 @@
     --panel: linear-gradient(90deg, rgba(16,16,16,1) 0%, rgba(27,27,27,1) 100%);
     --solidPanel: #1b1b1b;
     --graySelector: #6b6b6b;
+    --graySelectorDark: #363636;
 }

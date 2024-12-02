@@ -13,9 +13,7 @@
                     <h2>Seleccione sus Asientos</h2>
                 </div>
                 <div class="main-panel-detail">
-                    <div class="screen">
-                        Pantalla
-                    </div>
+
                     <div class="seats-panel">
                         <div class="seat-box">
                             <!-- A1-A4 -->
@@ -75,58 +73,61 @@
                         <div class="seat-box">
                             <!--A9-A12-->
                             <img id="A9" src="assets/svg/seats.svg" class="seat" data-id="A9">
-                            <img id="A9" src="assets/svg/seats.svg" class="seat" data-id="A10">
-                            <img id="A9" src="assets/svg/seats.svg" class="seat" data-id="A11">
-                            <img id="A9" src="assets/svg/seats.svg" class="seat" data-id="A12">
-                            <!--B5-B8-->
-                            <img id="B10" src="assets/svg/seats.svg" class="seat" data-id="B9">
-                            <img id="B11" src="assets/svg/seats.svg" class="seat" data-id="B10">
-                            <img id="B12" src="assets/svg/seats.svg" class="seat" data-id="B11">
-                            <img id="B13" src="assets/svg/seats.svg" class="seat" data-id="B12">
-                            <!--C5-C8-->
-                            <img id="C10" src="assets/svg/seats.svg" class="seat" data-id="C9">
-                            <img id="C11" src="assets/svg/seats.svg" class="seat" data-id="C10">
-                            <img id="C12" src="assets/svg/seats.svg" class="seat" data-id="C11">
-                            <img id="C13" src="assets/svg/seats.svg" class="seat" data-id="C12">
-                            <!--D5-D8-->
-                            <img id="D10" src="assets/svg/seats.svg" class="seat" data-id="D9">
-                            <img id="D11" src="assets/svg/seats.svg" class="seat" data-id="D10">
-                            <img id="D12" src="assets/svg/seats.svg" class="seat" data-id="D11">
-                            <img id="D13" src="assets/svg/seats.svg" class="seat" data-id="D12">
-                            <!--E5-E8-->
-                            <img id="E10" src="assets/svg/seats.svg" class="seat" data-id="E9">
-                            <img id="E11" src="assets/svg/seats.svg" class="seat" data-id="E10">
-                            <img id="E12" src="assets/svg/seats.svg" class="seat" data-id="E11">
-                            <img id="E13" src="assets/svg/seats.svg" class="seat" data-id="E12">
+                            <img id="A10" src="assets/svg/seats.svg" class="seat" data-id="A10">
+                            <img id="A11" src="assets/svg/seats.svg" class="seat" data-id="A11">
+                            <img id="A12" src="assets/svg/seats.svg" class="seat" data-id="A12">
+                            <!--B9-B12-->
+                            <img id="B9" src="assets/svg/seats.svg" class="seat" data-id="B9">
+                            <img id="B10" src="assets/svg/seats.svg" class="seat" data-id="B10">
+                            <img id="B11" src="assets/svg/seats.svg" class="seat" data-id="B11">
+                            <img id="B12" src="assets/svg/seats.svg" class="seat" data-id="B12">
+                            <!--C9-C12-->
+                            <img id="C9" src="assets/svg/seats.svg" class="seat" data-id="C9">
+                            <img id="C10" src="assets/svg/seats.svg" class="seat" data-id="C10">
+                            <img id="C11" src="assets/svg/seats.svg" class="seat" data-id="C11">
+                            <img id="C12" src="assets/svg/seats.svg" class="seat" data-id="C12">
+                            <!--D9- 12-->
+                            <img id="D9" src="assets/svg/seats.svg" class="seat" data-id="D9">
+                            <img id="D10" src="assets/svg/seats.svg" class="seat" data-id="D10">
+                            <img id="D11" src="assets/svg/seats.svg" class="seat" data-id="D11">
+                            <img id="D12" src="assets/svg/seats.svg" class="seat" data-id="D12">
+                            <!--E9-E12-->
+                            <img id="E9" src="assets/svg/seats.svg" class="seat" data-id="E9">
+                            <img id="E10" src="assets/svg/seats.svg" class="seat" data-id="E10">
+                            <img id="E11" src="assets/svg/seats.svg" class="seat" data-id="E11">
+                            <img id="E12" src="assets/svg/seats.svg" class="seat" data-id="E12">
                         </div>
 
                         <div class="seat-box">
                             <!--A13-A16-->
-                            <img src="assets/svg/seats.svg">
-                            <img src="assets/svg/seats.svg">
-                            <img src="assets/svg/seats.svg">
-                            <img src="assets/svg/seats.svg">
+                            <img id="A13" src="assets/svg/seats.svg" class="seat" data-id="A13">
+                            <img id="A14" src="assets/svg/seats.svg" class="seat" data-id="A14">
+                            <img id="A15" src="assets/svg/seats.svg" class="seat" data-id="A15">
+                            <img id="A16" src="assets/svg/seats.svg" class="seat" data-id="A16">
                             <!--B13-B16-->
-                            <img src="assets/svg/seats.svg">
-                            <img src="assets/svg/seats.svg">
-                            <img src="assets/svg/seats.svg">
-                            <img src="assets/svg/seats.svg">
+                            <img id="B13" src="assets/svg/seats.svg" class="seat" data-id="B13">
+                            <img id="B14" src="assets/svg/seats.svg" class="seat" data-id="B14">
+                            <img id="B15" src="assets/svg/seats.svg" class="seat" data-id="B15">
+                            <img id="B16" src="assets/svg/seats.svg" class="seat" data-id="B16">
                             <!--C13-C16-->
-                            <img src="assets/svg/seats.svg">
-                            <img src="assets/svg/seats.svg">
-                            <img src="assets/svg/seats.svg">
-                            <img src="assets/svg/seats.svg">
+                            <img id="C13" src="assets/svg/seats.svg" class="seat" data-id="C13">
+                            <img id="C14" src="assets/svg/seats.svg" class="seat" data-id="C14">
+                            <img id="C15" src="assets/svg/seats.svg" class="seat" data-id="C15">
+                            <img id="C16" src="assets/svg/seats.svg" class="seat" data-id="C16">
                             <!--D13-D16-->
-                            <img src="assets/svg/seats.svg">
-                            <img src="assets/svg/seats.svg">
-                            <img src="assets/svg/seats.svg">
-                            <img src="assets/svg/seats.svg">
+                            <img id="D13" src="assets/svg/seats.svg" class="seat" data-id="D13">
+                            <img id="D14" src="assets/svg/seats.svg" class="seat" data-id="D14">
+                            <img id="D15" src="assets/svg/seats.svg" class="seat" data-id="D15">
+                            <img id="D16" src="assets/svg/seats.svg" class="seat" data-id="D16">
                             <!--E13-E16-->
-                            <img src="assets/svg/seats.svg">
-                            <img src="assets/svg/seats.svg">
-                            <img src="assets/svg/seats.svg">
-                            <img src="assets/svg/seats.svg">
+                            <img id="E13" src="assets/svg/seats.svg" class="seat" data-id="E13">
+                            <img id="E14" src="assets/svg/seats.svg" class="seat" data-id="E14">
+                            <img id="E15" src="assets/svg/seats.svg" class="seat" data-id="E15">
+                            <img id="E16" src="assets/svg/seats.svg" class="seat" data-id="E16">
                         </div>
+                    </div>
+                    <div class="screen">
+                        Pantalla
                     </div>
                 </div>
                 <div class="main-panel-footer">

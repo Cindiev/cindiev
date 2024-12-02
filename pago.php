@@ -1,6 +1,8 @@
 
     <link rel="stylesheet" href="css/pago.css">
     <link rel="stylesheet" href="css/cartPanel.css">
+    <script src="js/pago.js"></script>
+
     <main>
         <div class="content-gradient"></div>
         <div class="content" id="content-panel" data-name="<?php echo $page; ?>">
@@ -13,14 +15,15 @@
                 </div>
                 <div class="main-panel-detail">
                     <div class="purchase-container">
+<!--1st Panel-->
                         <div class="purchase">
                             <div class="purchase-title">Resúmen</div>
                             <img src="assets/movies/huerfanas.jpg">
                             <div class="purchase-movie">
-                                <div class="purchase-movie-title">Las dos Huérfanas</div>
-                                <div class="purchase-movie-details">60 min ESP</div>
+                                <div id="r-mtitle" class="purchase-movie-title">Las dos Huérfanas</div>
+                                <div id="r-mdetail" class="purchase-movie-details">60 min ESP</div>
                                 <div class="purchase-movie-location">Cine Cuervos, Refugio</div>
-                                <div class="purchase-scheduled-time">A las 16:50 PM</div>
+                                <div id="r-start" class="purchase-scheduled-time">A las 16:50 PM</div>
                                 <div class="purchase-summary-item">
                                     <div class="purchase-summary-title">x8 Tickets</div>
                                     <div class="purchase-summary-image"><img src="assets/svg/ticket.svg"></div>
@@ -44,7 +47,8 @@
                                 <button>Continuar con el Pago</button>
                             </div>
                         </div>
-                        <div class="payment">
+<!--2nd Panel-->
+                        <div class="payment" style="display:none;">
                             <div class="payment-title">Seleccione su método de pago</div>
                             <div class="payment-buttons">
                                 <div class="payment-button"></div>
@@ -67,14 +71,15 @@
                             <div class="payment-mail">Cuenta: iadeb287@gmail.com</div>
                             <button id="paybtn">Continuar</button>
                         </div>
-                        <div class="completion">
+<!--3rd Panel-->
+                        <div class="completion" style="display:none;">
                             <div class="completion-title">¡Compra Exitosa!</div>
                             <img src="assets/movies/huerfanas.jpg">
                             <div class="completion-details">
-                                <div class="comp-movie">Las dos huérfanas <div>60 min ESP</div></div>
+                                <div id="movie-info" class="comp-movie">Las dos huérfanas <div>60 min ESP</div></div>
                                 <img src="assets/svg/ticket_final.svg">
-                                <div class="ticket-end-title">Las dos Huérfanas</div>
-                                <div class="ticket-end-time">16:50 PM</div>
+                                <div id="t-title" class="ticket-end-title">Las dos Huérfanas</div>
+                                <div id="t-end" class="ticket-end-time">16:50 PM</div>
                                 <div class="ticket-end-place">Cine Cuervos, Refugio</div>
                                 <img class="ticket-end-logo" src="assets/svg/logo_white.svg" alt="">
                             </div>
@@ -87,13 +92,11 @@
                         </div>
                     </div>
                     <div class="purchase-details">
-                        <div class="table">
+                        <div  class="table">
                             <div class="table-main-title">Detalle de la compra</div>
                             <div class="table-title">Tickets</div>
                             <div class="line"></div>
-                            <tbody>
-                                <!-- Las filas se generarán dinámicamente -->
-                            </tbody>
+                            <table id="ticket-table"></table>
                         </div>
 
 

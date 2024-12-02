@@ -1,9 +1,8 @@
 let selectedSeats = []; // Definimos el array que almacenará los asientos seleccionados
 
-
 function init() {
     loadData();
-    addSeatsListeners();
+    setupButtons();
     // Función que se llama cuando un asiento es seleccionado
     document.querySelectorAll('.seat').forEach(seat => {
         seat.addEventListener('click', function() {
@@ -71,7 +70,7 @@ function loadData() {
     }
 }
 
-function addSeatsListeners() {
+function setupButtons() {
     const seats = document.querySelectorAll('.seat-box img');
     const ticketData = JSON.parse(localStorage.getItem('selectedTickets'));
     const ticketLimit = ticketData ? ticketData.totalTickets : 0;
@@ -88,8 +87,7 @@ function addSeatsListeners() {
 
             selectedSeats.forEach((seat, index) => {
                 rowSeats.push(seat.dataset.id); // Usar el ID del asiento (A1, B2, etc.)
-
-                if (rowSeats.length === 3 || index === selectedSeats.length - 1) {
+                if (rowSeats.length === 11 || index === selectedSeats.length - 1) {
                     seatRow += `<tr><td>${rowSeats.join(', ')}</td></tr>`;
                     rowSeats = [];
                 }
@@ -124,24 +122,32 @@ function addSeatsListeners() {
         const seatLabel = seat.id;
         seat.setAttribute('data-id', seatLabel); 
     });
-}
 
+    
+    document.querySelector('.return').addEventListener('click', () =>{
+        window.location.href = 'agendar.php?p=ticket';
+    });
+}
 function continueListener() {
     document.getElementById('continuar-asientos').addEventListener('click', function() {
-        // Verificar si hay asientos seleccionados
-        if (selectedSeats.length === 0) {
-            alert('Por favor, seleccione al menos un asiento.');
-            return;
-        }
-    
+
         // Recuperar los datos de los tickets desde el localStorage
-        const storedTickets = localStorage.getItem('selectedTickets');
+        const storedTickets = JSON.parse(localStorage.getItem('selectedTickets'));
         if (!storedTickets) {
-            alert('No se ha seleccionado ningún ticket');
+            alert('Hubo un error al guardar los datos. Porfavor intente realizar el proceso desde el principio');
+            return;
+        }
+        
+        // Verificar si hay asientos seleccionados
+        if (selectedSeats.length < storedTickets.totalTickets) {
+            alert('Advertencia: Usted ha seleccionado ' 
+                +selectedSeats.length+' de ' + storedTickets.totalTickets + 
+                ' asientos. Asegúrese de seleccionarlos todos');
             return;
         }
     
-        const ticketData = JSON.parse(storedTickets);
+    
+        const ticketData = JSON.parse(localStorage.getItem('selectedTickets'));
     
         // Obtener la información de la película (esto debería estar disponible o ser parte de la página)
         const movieTitle = document.getElementById('selected-title').textContent;

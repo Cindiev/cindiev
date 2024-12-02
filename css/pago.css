@@ -1,3 +1,6 @@
+h2{
+    margin-bottom: 24px;
+}
 .main-panel{
     width: 86vw;
 }
@@ -162,7 +165,7 @@
     justify-content: center;
 }
 .purchase-action button{
-    margin-top: 48px;
+    margin-top: 32px;
 
     border: 1px solid rgba(255, 255, 255, 0);
     cursor: pointer;
@@ -184,12 +187,6 @@
     transition: 150ms;
 }
 
-.purchase{
-    display: none;
-}
-.payment{
-    display: none;
-}
 
 .payment{
     position: relative;
@@ -293,8 +290,8 @@
 
 .completion{
     position: relative;
-    margin-inline: 220px;
-    width: calc(100% - 2*220px);
+    margin-left: 300px;
+    width: calc(100% - 2* 220px);
     height: 100%;
 }
 

@@ -1,3 +1,6 @@
+h2{
+    margin-bottom: 12px;
+}
 .main-panel{
     position: relative;
     float: left;
@@ -136,7 +139,6 @@
     float: left;
     width: 33.3%;
     height: 100%;
-    background: var(--graySelector);
     border-radius: 11px 0px 0px 11px;
     align-content: center;
     font-weight: 700;
@@ -149,15 +151,17 @@
     float: left;
     width: 33.3%;
     height: 100%;
-    background-color: #5c5c5c9a;
+    background-color: var(--graySelectorDark);
     align-content: center;
+}
+.plus-button, .minus-button{
+    background: #5c5c5c;
 }
 .plus-button{
     position: relative;
     float: left;
     width: 33.3%;
     height: 100%;
-    background: var(--graySelector);
     border-radius: 0px 11px 11px 0px;
     align-content: center;
     font-weight: 700;
@@ -166,18 +170,19 @@
     user-select: none;
 }
 .plus-button:hover, .minus-button:hover{
-    background: #afafaf;
-    color: #373737;
+    background: #b4b4b4;
+    color: #ffffff;
     transition: 150ms;
 }
 .plus-button:active, .minus-button:active{
-    background: #dddddd;
-    color: #1c1c1c;
+    background: #ff0000;
+    color: #ffffff;
 }
 
 .main-panel-footer{
     width: 100%;
     position: relative;
+    margin-top: 28px;
 }
 .main-panel-footer .buttons{
     position: relative;

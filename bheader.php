@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/footer.css">
 
     <link rel="icon" href="assets/cindiev_logo_white.png">
-    
+    <script>function concatAmPm(time){let hours = parseInt(time.split(':')[0], 10);let period = hours >= 12 ? "PM" : "AM";return `${time} ${period}`;}</script>
 </head>
 <body onload="init()">
     <header>

@@ -17,7 +17,7 @@ h2{
 .seats-panel{
     position: relative;
     margin-inline: 76px;
-    margin-top: 24px;
+    margin-bottom: 24px;
     width: calc(100% - 2*76px);
     height: calc(100% - 72px);
     display: flex;

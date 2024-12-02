@@ -1,6 +1,6 @@
 function init() {
     loadData();
-    setupContinueButton();
+    setupButtons();
 }
 
 function loadData() {
@@ -59,15 +59,12 @@ function loadData() {
         if (selectedSeats.length > 0) {
             const seatsTableBody = document.getElementById('seats-table');
             seatsTableBody.innerHTML = ''; // Limpiar contenido previo
-
+            var row = ``;
             selectedSeats.forEach(seatId => {
-                const row = `
-                    <tr>
-                        <td>${seatId}</td> <!-- Aquí mostramos el ID del asiento -->
-                    </tr>
-                `;
-                seatsTableBody.insertAdjacentHTML('beforeend', row);
+                row += `${seatId}, `;
             });
+            row = row.slice(0, -2);
+            seatsTableBody.insertAdjacentHTML('beforeend', `<tr><td>${row}</td></tr>`);
         } else {
             console.log('No se han seleccionado asientos.');
         }
@@ -77,7 +74,7 @@ function loadData() {
 }
 
 // Función para manejar el botón de "Continuar"
-function setupContinueButton() {
+function setupButtons() {
     const continueButton = document.querySelector('.btn.register');
     continueButton.addEventListener('click', function() {
         // Obtener la información necesaria para guardar
@@ -106,5 +103,9 @@ function setupContinueButton() {
         } else {
             alert('Faltan datos necesarios. Por favor, regresa y completa la selección.');
         }
+    });
+
+    document.querySelector('.return').addEventListener('click', () =>{
+        window.location.href = 'agendar.php?p=asientos';
     });
 }
