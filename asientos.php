@@ -163,7 +163,7 @@
                     <div class="table">
                         <div class="table-title">Tickets</div>
                         <div class="line"></div>
-                        <table>
+                        <table id="tickets-table">
                             <tbody>
                                 <!-- Las filas se generarán dinámicamente desde tickets.js -->
                             </tbody>
@@ -172,8 +172,8 @@
                     <div class="table">
                         <div class="table-title">Asientos</div>
                         <div class="line"></div>
-                        <table>
-                            <tbody id="seats-table">
+                        <table id="seats-table">
+                            <tbody id="seats-table-tbody">
                                 <!-- Las filas se generarán dinámicamente desde asientos.js -->
                             </tbody>
                         </table>

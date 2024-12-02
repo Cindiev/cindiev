@@ -105,6 +105,20 @@ function setupButtons() {
         }
     });
 
+    document.querySelector('#popcorn').addEventListener('click', function() {
+        document.querySelector('#popcorn .sq-decorative').style.height = '0px';
+        document.querySelector('#popcorn .square-icon').style.display = 'none';
+        document.querySelector('#popcorn .square-title').style.display = 'none';
+        document.querySelector('#popcorn .sq-content').style.height = '100%';
+    });
+
+    document.querySelector('#drink').addEventListener('click', function() {
+        document.querySelector('#drink .sq-decorative').style.height = '0px';
+        document.querySelector('#drink .square-icon').style.display = 'none';
+        document.querySelector('#drink .square-title').style.display = 'none';
+        document.querySelector('#drink .sq-content').style.height = '100%';
+    });
+
     document.querySelector('.return').addEventListener('click', () =>{
         window.location.href = 'agendar.php?p=asientos';
     });

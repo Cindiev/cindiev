@@ -151,7 +151,7 @@ h2{
     float: left;
     width: 33.3%;
     height: 100%;
-    background-color: var(--graySelectorDark);
+    background-color: #3b3b3b;
     align-content: center;
 }
 .plus-button, .minus-button{

@@ -15,17 +15,83 @@
                 <div class="main-panel-detail">
                     <div class="square-selector">
                         <div class="square-align">
-                            <div class="square">
-                                <div class="square-icon">
-                                    <img src="assets/svg/popcorns.svg">
+                            <div id="popcorn" class="square">
+                                <div class="sq-decorative">
+                                    <div class="square-icon">
+                                        <img src="assets/svg/popcorns.svg">
+                                    </div>
+                                    <div class="square-title">Palomitas</div>
                                 </div>
-                                <div class="square-title">Palomitas</div>
+                                <div class="sq-content">
+                                    <div class="sqc-item">
+                                        <img class="sqci-img" src="assets/svg/popcorns.svg">
+                                        <label class=sqci-title>Palomitas Grandes de Mantequilla</label>
+                                        <label class=sqci-price>$65</label>
+                                        <div class="sqci-minus">-</div>
+                                        <div class="sqci-plus">+</div>
+                                    </div>
+                                    <div class="sqc-item">
+                                        <img class="sqci-img" src="assets/svg/popcorns.svg">
+                                        <label class=sqci-title>Palomitas Medianas</label>
+                                        <label class=sqci-price>$59</label>
+                                        <div class="sqci-minus">-</div>
+                                        <div class="sqci-plus">+</div>
+                                    </div>
+                                    <div class="sqc-item">
+                                        <img class="sqci-img" src="assets/svg/popcorns.svg">
+                                        <label class=sqci-title>Palomitas Prqueñas</label>
+                                        <label class=sqci-price>$50</label>
+                                        <div class="sqci-minus">-</div>
+                                        <div class="sqci-plus">+</div>
+                                    </div>
+
+                                </div>
                             </div>
-                            <div class="square">
-                                <div class="square-icon">
-                                    <img src="assets/svg/drink.svg">
+                            <div id="drink" class="square">
+                                <div class="sq-decorative">
+                                    <div class="square-icon">
+                                        <img src="assets/svg/drink.svg">
+                                    </div>
+                                    <div class="square-title">Bebidas</div>
                                 </div>
-                                <div class="square-title">Bebidas</div>
+                                <div class="sq-content">
+                                    <div class="sqc-item">
+                                        <img class="sqci-img" src="assets/svg/drink.svg">
+                                        <label class=sqci-title>Vaso Jumbo</label>
+                                        <label class=sqci-price>$87</label>
+                                        <div class="sqci-minus">-</div>
+                                        <div class="sqci-plus">+</div>
+                                    </div>
+                                    <div class="sqc-item">
+                                        <img class="sqci-img" src="assets/svg/drink.svg">
+                                        <label class=sqci-title>Vaso Grande</label>
+                                        <label class=sqci-price>$83</label>
+                                        <div class="sqci-minus">-</div>
+                                        <div class="sqci-plus">+</div>
+                                    </div>
+                                    <div class="sqc-item">
+                                        <img class="sqci-img" src="assets/svg/drink.svg">
+                                        <label class=sqci-title>Vaso Mediano</label>
+                                        <label class=sqci-price>$60</label>
+                                        <div class="sqci-minus">-</div>
+                                        <div class="sqci-plus">+</div>
+                                    </div>
+                                    <div class="sqc-item">
+                                        <img class="sqci-img" src="assets/svg/drink.svg">
+                                        <label class=sqci-title>Vaso Chico</label>
+                                        <label class=sqci-price>$40</label>
+                                        <div class="sqci-minus">-</div>
+                                        <div class="sqci-plus">+</div>
+                                    </div>
+                                    <div class="sqc-item">
+                                        <img class="sqci-img" src="assets/svg/drink.svg">
+                                        <label class=sqci-title>Vaso Grande Refill</label>
+                                        <label class=sqci-price>$87</label>
+                                        <div class="sqci-minus">-</div>
+                                        <div class="sqci-plus">+</div>
+                                    </div>
+
+                                </div>
                             </div>
                             <div class="square-mid">
                                 <div class="square-mid-icon">
