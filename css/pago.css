@@ -306,7 +306,7 @@ h2{
 .completion img{
     position: relative;
     float: left;
-    height: 240px;
+    height: 237px;
 }
 
 .completion-details{
@@ -326,7 +326,7 @@ h2{
     float: left;
     color: white;
     font-size: 16pt;
-    width: 50%;
+    width: 56%;
     margin-left: 24px;
 }
 .comp-movie div{
