@@ -117,7 +117,7 @@ h2{
 }
 .ticket-promo-name{
     color: #ffffff9a;
-    margin-top: 28px;
+    margin-top: 56px;
 }
 .ticket-selector{
     text-align: center;
@@ -228,3 +228,4 @@ h2{
     border: 1px solid white;
     transition: 150ms;
 }
+

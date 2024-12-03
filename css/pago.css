@@ -20,6 +20,7 @@ h2{
     width: 30%;
     height: 100%;
     overflow-y: auto;
+    overflow-x: hidden;
     margin-top: -55px;
 }
 
@@ -260,7 +261,7 @@ h2{
     padding: 24px 0;
 }
 
-#paybtn{
+.paybtn{
     margin-top: 48px;
 
     border: 1px solid rgba(255, 255, 255, 0);
@@ -276,7 +277,7 @@ h2{
 
 }
 
-#paybtn:hover{
+.paybtn:hover{
     background: #ff2525;
     border: 1px solid white;
     transition: 150ms;
@@ -325,7 +326,8 @@ h2{
     float: left;
     color: white;
     font-size: 16pt;
-    width: 78%;
+    width: 50%;
+    margin-left: 24px;
 }
 .comp-movie div{
     position: relative;
@@ -395,7 +397,7 @@ h2{
 
 .ticket-end-title{
     position: absolute;
-    top: 55px;
+    top: 34px;
     left: 140px;
     color: white;
     font-size: 16pt;
@@ -403,7 +405,7 @@ h2{
 }
 .ticket-end-time{
     position: absolute;
-    top: 80px;
+    top: 62px;
     left: 140px;
     color: white;
     font-size: 16pt;
@@ -412,7 +414,7 @@ h2{
 
 .ticket-end-place{
     position: absolute;
-    top: 150px;
+    top: 136px;
     left: 140px;
     color: white;
     font-size: 16pt;
@@ -425,3 +427,20 @@ h2{
     left: -100px;
     width: 70px;
 }
+
+
+.table{
+    margin-left: -80px;
+}
+
+
+.completion-details {
+    perspective: 1000px; /* Añade profundidad para el efecto 3D */
+}
+
+.hover-effect {
+    transition: transform 0.1s ease;
+    transform-style: preserve-3d; /* Habilita transformaciones 3D */
+    will-change: transform;
+}
+

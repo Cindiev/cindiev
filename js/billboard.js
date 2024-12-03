@@ -47,6 +47,7 @@ function createFunctions() {
                 const selectedMovie = {
                     title: movie.title,
                     details: movie.details,
+                    cover: movie.cover,
                     schedule: schedule
                 };
 

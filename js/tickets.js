@@ -6,13 +6,14 @@ function init() {
 
 function loadData() {
     const selectedMovie = JSON.parse(localStorage.getItem('selectedMovie'));
+    document.querySelector('.movie-summary img').setAttribute('src', selectedMovie.cover);
 
     if (selectedMovie) {
         const timeDisplay = document.getElementById('selected-time');
         const titleDisplay = document.getElementById('selected-title');
         const detailsDisplay = document.querySelector('.summary-details');
 
-        timeDisplay.textContent = selectedMovie.schedule;
+        timeDisplay.textContent = concatAmPm(selectedMovie.schedule);
         titleDisplay.textContent = selectedMovie.title;
         detailsDisplay.textContent = selectedMovie.details;
     } else {

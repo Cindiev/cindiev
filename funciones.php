@@ -9,7 +9,10 @@
                 <h2 id="billboard-title">Ver Cartelera</h2>
                 <div class="floating-container">
                     Selecciona tu cine
-                    <div class="floating-selector">Cine Cuervos</div>
+                    <select class="floating-selector">
+                        <option value="CICUE">Cine Cuervos</option>
+                        <option value="TONAL">Cine Tonalá</option>
+                    </select>
                     <div class="floating-text2 gray-text">¿No encuentras tu cine?</div>
                 </div>
                 <div class="floating-container">
@@ -20,7 +23,6 @@
                 </div>
             </div>
             <div class="movie-billboard-container" id="movies">
-
 
             </div>
             <div class="tentacle tentacle-left"></div>

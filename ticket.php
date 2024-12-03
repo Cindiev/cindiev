@@ -68,7 +68,7 @@
                                 <img src="assets/svg/ticket_buy.svg" alt="">
                             </div>
                             <div class="ticket-details">
-                                <div class="ticket-name">Adulto D</div>
+                                <div class="ticket-name">Adulto y una Dona</div>
                                 <div class="ticket-price">$65</div>
                                 <div class="ticket-promo-name">+1 Dona glaseada</div>
                                 <div class="ticket-selector">
@@ -94,7 +94,7 @@
                 </div>
                 <div class="panel-content">
                     <div class="movie-summary">
-                        <img src="assets/movies/huerfanas.jpg">
+                        <img src="assets/movies/nocover.png">
                         <div id="selected-title" class="summary-title"></div>
                         <div class="summary-details">60 min ESP</div>
                         <div id="selected-time" class="summary-date"></div>

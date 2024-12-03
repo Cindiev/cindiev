@@ -12,6 +12,7 @@ h2{
     color: #FFF;
     font-size: 36pt;
 }
+@layer base { img { display: initial; } }
 
 header{
     width: 100%;

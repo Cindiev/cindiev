@@ -99,9 +99,8 @@ function continueListener() {
             subtotal: storedTickets.subtotal,
             taxes: storedTickets.taxes,
             total: storedTickets.total,
-            selectedSeats: selectedSeatIds, // Asientos seleccionados
+            selectedSeats: selectedSeatIds,
         };
-
         // Guardar los datos en localStorage
         localStorage.setItem('selectedSeatsData', JSON.stringify(dataToSave));
 
@@ -114,6 +113,9 @@ function continueListener() {
 
 function loadData() {
     const storedTickets = localStorage.getItem('selectedTickets');
+    const selectedMovie = JSON.parse(localStorage.getItem('selectedMovie'));
+    document.querySelector('.movie-summary img').setAttribute('src', selectedMovie.cover);
+
     if (storedTickets) {
         const { movie, tickets, subtotal, taxes, total } = JSON.parse(storedTickets);
 
