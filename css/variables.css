@@ -5,4 +5,210 @@
     --solidPanel: #1b1b1b;
     --graySelector: #6b6b6b;
     --graySelectorDark: #363636;
+
+    --EcEcEc: #3c3c3c;
+    --lightGray: #434343;
+    transition: 150ms;
+
+    --hoverBorder: #FFFFFF;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+#header-logo{
+    text-align: center;
+    cursor: pointer;
+    transition: 150ms;
+}
+#header-logo:hover{
+    color: white;
+    transition: 150ms;
+}
+.content-gradient{
+    height: 105%;
+}
+.tentacle-left{
+    width: 748px;
+    height: 420px;
+    top: 526px;
+    left: -261px;
+    z-index: -1;
+    background-size: cover;
+    background-image: url(../assets/tentacle_1.png);
+    transform: rotate(61deg) scale(0.8);
+    opacity: 11%;
+}
+.tentacle-right{
+    position: absolute;
+    width: 731px;
+    height: 420px;
+    bottom: 46vh;
+    right: -272px;
+    z-index: 0;
+    background-size: cover;
+    background-image: url(../assets/tentacle_2.png);
+    transform: rotate(48deg) scale(0.55);
+    opacity: 11%;
+    filter: invert(1);
+}
+
+#login-panel{
+    color: black;
+    z-index: 999;
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    align-content: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.tentacle-left {
+    z-index: -1;
+    filter: invert(1);
+}
+
+
+.main-content{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-container{
+    position: relative;
+    width: 70%;
+    height: 70%;
+    display: flex;
+    margin-top: 120px;
+}
+
+.left-container, .right-container{
+    position: relative;
+    float: left;
+    width: 50%;
+}
+.left-container{
+    background: #262626;
+    border-radius: 11px 0px 0px 11px;
+    background: url(../assets/login1.png) no-repeat center;
+}
+.right-container{
+    background: #ffffff;
+    border-radius: 0px 11px 11px 0px;
+    transition: 150ms;
+}
+
+form{
+    width: 70%;
+}
+form .text-input{
+    position: relative;
+    font-family: 'LeagueSpartan';
+    width: 100%;
+    padding: 8px;
+    font-size: 16pt;
+    background: none;
+    border: 0;
+    border-bottom: 1px solid black;
+    color: black;
+    margin-top: 24px;
+    font-weight: 200;
+    outline: none;
+}
+
+#login-panel a{
+    color: #000000;
+    font-size: 12pt;
+    opacity: 60%;
+}
+
+#login-btn{
+    width: 100%;
+    height: 54px;
+    margin: 24px 0px 24px 0px;
+    background: #ededed;
+    color: black;
+    font-size: 16pt;
+    font-weight: 700;
+    border: 1px solid #00000000;
+    border-radius: 11px;
+    transition: 150ms;
+    cursor: pointer;
+}
+
+#login-btn:hover{
+    background: #ffffff00;
+    border: 1px solid #000000;
+    transition: 150ms;
+}
+
+.type-btn{
+    position: relative;
+    float: left;
+    width: 100px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 11px;
+    cursor: pointer;
+    font-size: 14pt;
+    transition: 150ms;
+}
+
+.type-buttton{
+    display: flex;
+}
+.l{
+    background: #181818;
+    transition: 150ms;
+}.r{
+    background: var(--EcEcEc);
+    transition: 150ms;
+}
+
+.remember-container{
+    margin-top: 32px;
+    font-size: 14pt;
+}
+.remember-container input{
+    margin-right: 12px;
+}
+
+.type-button{
+    background: #dbdbdb;
+    border-radius: 11px;
+}
+    */

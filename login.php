@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CINDIEV</title>
+    
+    <script src="js/fontawesome/solid.js"></script>
+    <link href="css/fontawesome/fontawesome.css" rel="stylesheet">
+    <link href="css/fontawesome/solid.css" rel="stylesheet">
 
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/base.css">
@@ -36,21 +40,20 @@
                             </div>
 
                             <form method="post" action="authenticate.php">
-                                <input class="text-input" placeholder="Correo electrónico" name="user-name" type="email"></input>
+                                <input class="text-input tei" placeholder="Correo electrónico" name="user-name" type="email"></input>
                                 <br>
-                                <input class="text-input" placeholder="Contraseña" name="password" type="password"></input>
+                                <input class="text-input tpi" placeholder="Contraseña" name="password" type="password"></input>
                                 <br>
                                 <div class="remember-container"><input type="checkbox" id="remember" name="remember-user" value="remember">Recordarme</div>
                                 <?php if(isset($_GET['error'])){ ?>
-                                    <label class='error'>Access Denied</label>
+                                    <div class='error'>Acceso Denegado: correo o contraseña incorrectos</div>
                                 <?php } ?>
-                            
                                 <br>
                                 <button id="login-btn" type="submit">Iniciar Sesión</button>
                             </form>
-                            <a href="" target="">¿Olvidaste tu contraseña?</a>
+                            <a class="login-a" href="" >¿Olvidaste tu contraseña?</a>
                             <br>
-                            <a href="" target="">Registrarse</a>
+                            <a class="login-a" href="" >Registrarse</a>
 
                         </div>
                     </div>

@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CINDIEV</title>
+    <script src="js/fontawesome/solid.js"></script>
+    <link href="css/fontawesome/fontawesome.css" rel="stylesheet">
+    <link href="css/fontawesome/solid.css" rel="stylesheet">
 
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/content.css">
     <link rel="stylesheet" href="css/footer.css">
 
     <link rel="stylesheet" href="css/variables.css">
-
     <link rel="icon" href="assets/cindiev_logo_white.png">
 </head>
 <body>

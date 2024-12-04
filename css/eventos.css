@@ -1,0 +1,165 @@
+.festival-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    padding: 50px;
+    border-radius: 10px;
+    color: #fff;
+    height: 67vh;
+    padding-inline: 148px;
+}
+
+.festival-text {
+    text-align: left;
+}
+
+.festival-text h1 {
+    font-size: 74pt;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 40px;
+}
+
+.festival-text p {
+    font-size: 20pt;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.festival-text label {
+    font-size: 1em;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.festival-buttons {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.festival-buttons .btn {
+    padding: 10px 20px;
+    width: 100%;
+    height: 54px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 700;
+    font-size: 14pt;
+    transition: 0.3s ease;
+}
+
+.btn-participate {
+    background-color: var(--red);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0);
+}
+
+.btn-participate:hover {
+    background: var(--red);
+    border: 1px solid white;
+    transition: 100ms;
+}
+
+.btn-info {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0);
+}
+
+/* Efecto hover en el botón Más información */
+.btn-info:hover {
+    background: #333;
+    border: 1px solid white;
+    transition: 100ms;
+}
+.selection-date {
+    font-size: 0.9em;
+    color: #fff;
+}
+
+.festival-categories {
+    text-align: center;
+}
+
+.festival-categories h2 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+}
+
+.categories-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.category {
+    text-align: center;
+    width: 33.3%;
+}
+
+.category img {
+    max-width: 175px;
+    margin-bottom: 10px;
+}
+
+.category p {
+    font-size: 20PT;
+    font-weight: bold;
+    color: #fff;
+}
+
+.category-note {
+    font-size: 20pt;
+    margin-top: 20px;
+    color: #fff;
+}
+
+#bg {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    z-index: -3; 
+    object-fit: cover; 
+}
+
+.content-gradient{
+    position: fixed;
+    float: left;
+    height: 100%;
+    background: linear-gradient(270deg, rgb(16 16 16 / 0%) 0%, rgb(0 0 0) 100%);
+    width: 60%;
+    margin-top: -20px;
+    z-index: -2;
+}
+
+.tentacle-left{
+    width: 748px;
+    height: 420px;
+    top: 2px;
+    left: -270px;
+    z-index: -1;
+    background-size: cover;
+    background-image: url(../assets/tentacle_1.png);
+    transform: rotate(273deg) scale(0.7);
+    opacity: 20%;
+    position: fixed;
+}
+
+.tentacle-right{
+    position: absolute;
+    width: 748px;
+    height: 420px;
+    bottom: -10vh;
+    right: -250px;
+    z-index: 0;
+    background-size: cover;
+    background-image: url(../assets/tentacle_2.png);
+    transform: rotate(0deg) scale(0.4);
+    opacity: 20%;
+}
+

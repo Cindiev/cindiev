@@ -6,12 +6,12 @@ INSERT INTO usuario (num, nombre, numTel, correo, contrasena, direccion) VALUES
     (DEFAULT, 'Carlos Rodríguez', '6647895678', 'carlos.rodriguez@example.com', 'MiPassw0rd', 'Avenida de las Flores #456, Playas de Tijuana, Tijuana, B.C.'),
     (DEFAULT, 'Laura Pérez', '6643339876', 'laura.perez@example.com', '1234Laura!', 'Calle del Mar #789, Hipódromo, Tijuana, B.C.'),
     (DEFAULT, 'Alejandro López', '6642224444', 'alejandro.lopez@example.com', 'L0pezPass', 'Paseo de los Pinos #567, La Mesa, Tijuana, B.C.'),
-    (DEFAULT, 'Ana Torres', '6647778888', 'ana.torres@example.com', 'Ana2022!', 'Calle de las Rosas #890, Otay, Tijuana, B.C.')
+    (DEFAULT, 'Ana Torres', '6647778888', 'ana.torres@example.com', 'Ana2022!', 'Calle de las Rosas #890, Otay, Tijuana, B.C.');
 
 INSERT INTO boleto(codigo, tipo, precio) VALUES
     (DEFAULT, 'adulto', 25.00),
     (DEFAULT, 'adulto mayor', 23.00),
-    (DEFAULT, 'infantil', 20.00)
+    (DEFAULT, 'infantil', 20.00);
 
 INSERT INTO director (codigo, nombre_completo, facebook, instagram, edad, nacionalidad) VALUES
     (DEFAULT, 'D. W. Griffith', null, null, 73, 'Estados Unidos'),
@@ -20,7 +20,7 @@ INSERT INTO director (codigo, nombre_completo, facebook, instagram, edad, nacion
     (DEFAULT, 'Benjamin Christensen', null, null, 79, 'Dinamarca'),
     (DEFAULT, 'Frank Borzaga', null, null, 68, 'Estados Unidos'),
     (DEFAULT, 'Gabriela Sandoval', 'www.facebook.com/gabrielaivette.sandovaltorres', 'www.instagram.com/gaby_sandoval389/', 34, 'México'),
-    (DEFAULT, 'Luis Estrada', null, null, 62, 'México')
+    (DEFAULT, 'Luis Estrada', null, null, 62, 'México');
 
 INSERT INTO genero(codigo, nombre) VALUES
     (DEFAULT, 'Terror'), /*1*/
@@ -36,7 +36,7 @@ INSERT INTO genero(codigo, nombre) VALUES
     (DEFAULT, 'Thriller'),/*11*/
     (DEFAULT, 'Policiaco'),/*12*/
     (DEFAULT, 'Musical'),/*13*/
-    (DEFAULT, 'Erótico')/*14*/
+    (DEFAULT, 'Erótico');/*14*/
 
 INSERT INTO horario(codigo, hora) VALUES
     (DEFAULT, '8:00 am'), /*1*/
@@ -67,7 +67,7 @@ INSERT INTO horario(codigo, hora) VALUES
     (DEFAULT, '8:30 pm'),/*26*/
     (DEFAULT, '9:00 pm'),/*27*/
     (DEFAULT, '9:30 pm'),/*28*/
-    (DEFAULT, '10:00 pm')/*29*/
+    (DEFAULT, '10:00 pm');/*29*/
 
 INSERT INTO ciudad(codigo, nombre) VALUES
     ('Tij', 'Tijuana'),
@@ -78,13 +78,13 @@ INSERT INTO ciudad(codigo, nombre) VALUES
     ('SQN', 'San Quintin'),
     ('SFP', 'San Felipe'),
     ('HSO', 'Hermosillo'),
-    ('VSP', 'Valle San Pedro')
+    ('VSP', 'Valle San Pedro');
 
 INSERT INTO cine(codigo, nombre, dirCalle, dirNum, dirColonia, numTel, ciudad) VALUES
     ('CCS', 'Cine Cuervos', 'Quintas Campestre', null, 'El Refugio', '6646133776', 'Tij'),
     ('TNL', 'Cine Tonalá', 'Av. Revolución', '1303', 'Zona Centro', '6646880118', 'Tij'),
     ('BMAC', 'Bigmoon Autocinema', 'blvd Insurgentes', '15502', 'Rio Tijuana 3ra etapa', '6631244927', 'Tij'),
-    ('BJZ', 'Cine Bujazán', 'Av Constitución', '1337', 'Zona Centro', null, 'Tij')
+    ('BJZ', 'Cine Bujazán', 'Av Constitución', '1337', 'Zona Centro', null, 'Tij');
 
 INSERT INTO clasificacion(codigo, tipo, descripcion) VALUES
     ('AA', 'Infantil', 'Películas con atractivo infantil, 
@@ -93,7 +93,7 @@ INSERT INTO clasificacion(codigo, tipo, descripcion) VALUES
     ('B', '12 años en adelante', 'Películas para adolescentes de 12 años en adelante.'),
     ('B15', '15 años en adelante', 'Película no recomendable para menores de 15 años de edad.'),
     ('C', '18 años en adelante', 'Películas para adultos de 18 años en adelante.'),
-    ('D', 'Solo adultos', 'Películas para adultos, con sexo explícito, lenguaje procaz o alto grado de violencia.')
+    ('D', 'Solo adultos', 'Películas para adultos, con sexo explícito, lenguaje procaz o alto grado de violencia.');
 
 INSERT INTO pelicula(codigo, nombre, sinopsis, imagen, clasificacion, cine, genero, duracion) VALUES
     (DEFAULT, 'El que recibe las bofetadas', 'Un científico traicionado por su mentor y su esposa pierde todo y huye al circo, 
@@ -110,7 +110,7 @@ INSERT INTO pelicula(codigo, nombre, sinopsis, imagen, clasificacion, cine, gene
     intenta chantajear a su esposa, mientras el militar desconfía de la fidelidad de la mujer.', 'imagen.jpg', 'A', 'CCS', 9, '84'),
     (DEFAULT, 'El séptimo cielo', 'Un joven (Charles Farrell) trabaja limpiando las alcantarillas de París, soñando con ser ascendido y poder barrer las calles. Lamentándose de su
      destino, niega la existencia de Dios con el pretexto de su condición actual, lo que es escuchado por el padre Chevillon (Émile Chautard), quien al escuchar su queja, le regala 
-     dos medallas religiosas y le ofrece el trabajo de barrendero con el que sueña.', 'imagen.jpg', 'A', 'CCS', 9, '120')
+     dos medallas religiosas y le ofrece el trabajo de barrendero con el que sueña.', 'imagen.jpg', 'A', 'CCS', 9, '120');
 
 INSERT INTO hora_peli(horario, pelicula) VALUES
     (1, 1),
@@ -145,7 +145,7 @@ INSERT INTO hora_peli(horario, pelicula) VALUES
     (10, 5),
     (15, 5),
     (20, 5),
-    (25, 5)
+    (25, 5);
 
 INSERT INTO asiento(codigo, nombre) VALUES
     ('A1','A1'),
@@ -367,7 +367,7 @@ INSERT INTO asiento(codigo, nombre) VALUES
     ('K17','K17'),
     ('K18','K18'),
     ('K19','K19'),
-    ('K20','K20')
+    ('K20','K20');
 
 INSERT INTO unidad_medida(codigo, nombre) VALUES
     ('H87',	'Pieza'),
@@ -400,7 +400,7 @@ INSERT INTO unidad_medida(codigo, nombre) VALUES
     ('XLT',	'Lote'),
     ('10',	'Grupos'),
     ('MLT',	'Mililitro'),
-    ('E54',	'Viaje')
+    ('E54',	'Viaje');
 
 INSERT INTO producto (codigo, nombre, descripcion, costo, precio) VALUES
 ('1001', 'Boleto general adulto', 'Boleto general para acceder a la sala de cine.', 10, 25),
@@ -429,13 +429,13 @@ INSERT INTO producto (codigo, nombre, descripcion, costo, precio) VALUES
 ('6005', 'Mordisco', 'Helado tipo sándwich sabor vainilla y chocolate', 12, 20),
 ('6006', 'M&M', 'Paquete de chocolates M&M chocolate', 15.3, 30),
 ('6007', 'Sniker', 'Barra de chocolate rellena de crema y cacahuate', 14, 28),
-('6008', 'Milky Way', 'Barra de chocolate rellena de cajeta', 14, 28)
+('6008', 'Milky Way', 'Barra de chocolate rellena de cajeta', 14, 28);
    
 
 
 INSERT INTO rep_ventas(num, nombre, primerApellido, segundoApellido, numTel, fechaContrato, cine) VALUES
     (DEFAULT, 'Jonathan', 'Zamudio', 'Corona', '6646133776', '15/09/2024', 'CCS'),
-    (DEFAULT, 'Melissa', 'Flores', 'Cervantes', '6645522123', '1/09/2024', 'CCS')
+    (DEFAULT, 'Melissa', 'Flores', 'Cervantes', '6645522123', '1/09/2024', 'CCS');
 
 INSERT INTO forma_pago(codigo, nombre) VALUES
     ('01',	'Efectivo'),
@@ -458,12 +458,12 @@ INSERT INTO forma_pago(codigo, nombre) VALUES
     ('28',	'Tarjeta de débito'),
     ('29',	'Tarjeta de servicios'),
     ('30',	'Aplicación de anticipos'),
-    ('99',	'Por definir')
+    ('99',	'Por definir');
 
 INSERT INTO pedido(num, fecha, canTotalProd, subtotal, IVA, total, cine, rep_Vtas, usuario, forma_pago) VALUES
     (DEFAULT, '2024/12/01', 4, 180.00, 14.4, 194.40, 'CCS', 1, 1, '01'),
     (DEFAULT, '2024/12/02', 3, 81.15, 1.85, 83.00, 'CCS', 1, 2, '04'),
-    (DEFAULT, '2024/12/02', 1, 25.00, 1.85, 26.85, 'CCS', 2, 1, '01')
+    (DEFAULT, '2024/12/02', 1, 25.00, 1.85, 26.85, 'CCS', 2, 1, '01');
 
 
 INSERT INTO ped_prod(pedido, producto, cantidad, importe) VALUES
@@ -474,20 +474,20 @@ INSERT INTO ped_prod(pedido, producto, cantidad, importe) VALUES
     (2, 1001, 1, 25.00),
     (2, 1002, 1, 20.00),
     (2, 4001, 1, 31.15),
-    (3, 1001, 1, 25.00)
+    (3, 1001, 1, 25.00);
 
 INSERT INTO promocion(codigo, nombre, descripcion) VALUES
     ('MTCNE', 'Martes de cine', 'Descuento del 25% en todos los voletos cada martes del año en curso'),
-    ('DLPTS', 'Dulcería para todos', 'Descuentos del 10% en toda la dulcería los miercoles del año en curso')
+    ('DLPTS', 'Dulcería para todos', 'Descuentos del 10% en toda la dulcería los miercoles del año en curso');
 
 INSERT INTO promo_pedido(promocion, pedido) VALUES
-    ('MTCNE', 3)
+    ('MTCNE', 3);
 
 INSERT INTO sala(num, nombre) VALUES
     (DEFAULT, 'Uno'),
     (DEFAULT, 'Dos'),
     (DEFAULT, 'Tres'),
-    (DEFAULT, 'Cuatro')
+    (DEFAULT, 'Cuatro');
 
 INSERT INTO sala_horario(sala, horario) VALUES
     (1, 1), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (1, 8), (1, 9), (1, 10),
@@ -501,7 +501,7 @@ INSERT INTO sala_horario(sala, horario) VALUES
     (3, 21), (3, 22), (3, 23), (3, 24), (3, 25), (3, 26), (3, 27), (3, 28), (3, 29),
     (4, 1), (4, 2), (4, 3), (4, 4), (4, 5), (4, 6), (4, 7), (4, 8), (4, 9), (4, 10),
     (4, 11), (4, 12), (4, 13), (4, 14), (4, 15), (4, 16), (4, 17), (4, 18), (4, 19), (4, 20),
-    (4, 21), (4, 22), (4, 23), (4, 24), (4, 25), (4, 26), (4, 27), (4, 28), (4, 29)
+    (4, 21), (4, 22), (4, 23), (4, 24), (4, 25), (4, 26), (4, 27), (4, 28), (4, 29);
 
 INSERT INTO funcion(sala, pelicula, cine) VALUES
     (1, 1, 'CCS'),
@@ -511,7 +511,7 @@ INSERT INTO funcion(sala, pelicula, cine) VALUES
     (2, 5, 'BJZ'),
     (1, 4, 'TNL'),
     (2, 1, 'TNL'),
-    (1, 3, 'BMAC')
+    (1, 3, 'BMAC');
 
 
 INSERT INTO sala_cine(sala, cine) VALUES
@@ -524,7 +524,7 @@ INSERT INTO sala_cine(sala, cine) VALUES
     (3, 'TNL'),
     (1, 'BMAC'),
     (1, 'BJZ'),
-    (2, 'BJZ')
+    (2, 'BJZ');
 
 
 /*Revisar*/

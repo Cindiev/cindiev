@@ -1,3 +1,4 @@
+create database cindiev;
 use cindiev;
 
 create table usuario(
@@ -7,13 +8,13 @@ create table usuario(
     correo VARCHAR(50) not null,
     contrasena VARCHAR(50) not null,
     direccion VARCHAR(150) 
-)
+);
 
 create table boleto(
     codigo int PRIMARY KEY AUTO_INCREMENT,
     tipo VARCHAR(20) not null,
     precio float not null 
-)
+);
 
 create table director(
     codigo int PRIMARY KEY AUTO_INCREMENT,
@@ -22,23 +23,23 @@ create table director(
     instagram VARCHAR(100),
     edad int,
     nacionalidad VARCHAR(20)
-)
+);
 
 create table genero(
     codigo int PRIMARY KEY AUTO_INCREMENT,
     nombre VARCHAR(30) not null,
     clasificacion VARCHAR(30) not null 
-)
+);
 
 create table horario(
    codigo int PRIMARY KEY AUTO_INCREMENT,
    hora VARCHAR(10) not null 
-)
+);
 
 create table ciudad(
     codigo varchar(5) PRIMARY KEY,
     nombre varchar(15) not null unique
-)
+);
 
 create table cine(
     codigo varchar(5) PRIMARY KEY,
@@ -49,13 +50,13 @@ create table cine(
     numTel varchar(15),
     ciudad varchar(5) not null,
     foreign key(ciudad) references ciudad(codigo)
-)
+);
 
 create table clasificacion(
     codigo varchar(5) PRIMARY KEY,
     tipo varchar(30),
     descripcion varchar(200)
-)
+);
 
 create table pelicula(
     codigo int PRIMARY KEY AUTO_INCREMENT,
@@ -69,7 +70,7 @@ create table pelicula(
     foreign key(clasificacion) references clasificacion(codigo),
     foreign key(cine) references cine(codigo),
     foreign key(genero) references genero(codigo)
-)
+);
 
 create table hora_peli(
     horario int,
@@ -78,7 +79,7 @@ create table hora_peli(
     proyeccion VARCHAR(15),
     Foreign Key (horario) REFERENCES horario(codigo),
     Foreign Key (pelicula) REFERENCES pelicula(codigo)
-)
+);
 
 /*REVISAR*/
 create table catalogo(
@@ -91,18 +92,18 @@ create table catalogo(
     foreign key(horario) references horario(codigo),
     foreign key(cine) references cine(codigo),
     foreign key(pelicula) references pelicula(codigo)
-)
+);
 
 /*SE MODIFICO*/
 create table asiento(
     codigo varchar(5) PRIMARY KEY,
     nombre varchar(10) not null
-)
+);
 
 create table unidad_medida(
     codigo VARCHAR(5) not null,
     nombre VARCHAR(25) not null
-)
+);
 
 create table producto(
     codigo VARCHAR(5) PRIMARY KEY not null,
@@ -110,7 +111,7 @@ create table producto(
     descripcion VARCHAR(50),
     costo float not null,
     precio float not null
-)
+);
 
 create table rep_ventas(
     num int PRIMARY KEY AUTO_INCREMENT,
@@ -121,12 +122,12 @@ create table rep_ventas(
     fechaContrato date not null,
     cine varchar(5) not null,
     foreign key(cine) references cine(codigo)
-)
+);
 /*Se modifico*/
 create table forma_pago(
     codigo VARCHAR(5) not null PRIMARY KEY,
     nombre VARCHAR(20) NOT NULL
-)
+);
 
 /*Se modifico*/
 create table pedido(
@@ -144,7 +145,7 @@ create table pedido(
     foreign key(rep_Vtas) references rep_ventas(num),
     foreign key(usuario) references usuario(num),
     Foreign Key (forma_pago) REFERENCES forma_pago(codigo)
-)
+);
 
 create table ped_prod(
     pedido int,
@@ -154,13 +155,13 @@ create table ped_prod(
     PRIMARY KEY(pedido, producto),
     foreign key(pedido) references pedido(num),
     foreign key(producto) references producto(codigo)
-)
+);
 
 create table promocion(
     codigo VARCHAR(5) NOT NULL PRIMARY KEY,
     nombre VARCHAR(25) not NULL,
     descripcion VARCHAR(200)
-)
+);
 
 create table promo_pedido(
     promocion varchar(5),
@@ -168,13 +169,13 @@ create table promo_pedido(
     PRIMARY KEY(promocion, pedido),
     Foreign Key (promocion) REFERENCES promocion(codigo),
     Foreign Key (pedido) REFERENCES pedido(num)
-)
+);
 /*se modifico*/
 
 create table sala(
     num int not null PRIMARY KEY AUTO_INCREMENT,
     nombre VARCHAR(20) /*se puede quitar*/
-)
+);
 
 CREATE TABLE sala_asiento (
     id SERIAL PRIMARY KEY,
@@ -190,7 +191,7 @@ create table sala_horario(
     PRIMARY KEY(sala, horario),
     Foreign Key (sala) REFERENCES sala(num),
     Foreign Key (horario) REFERENCES horario(codigo)
-)
+);
 
 create table funcion(
     sala int not null,
@@ -200,7 +201,7 @@ create table funcion(
     Foreign Key (cine) REFERENCES cine(codigo),
     Foreign Key (sala) REFERENCES sala(num),
     Foreign Key (pelicula) REFERENCES pelicula(codigo)
-)
+);
 
 create table sala_cine(
     sala int not null,
@@ -209,3 +210,4 @@ create table sala_cine(
     Foreign Key (sala) REFERENCES sala(num),
     Foreign Key (cine) REFERENCES cine(codigo)
 )
+;
