@@ -13,7 +13,7 @@
                         Participa con nosotros en el festival de cortometrajes independientes, donde daremos a conocer tu propia obra y valoraremos los trabajos que más destaquen en su categoría.
                     </p>
                     <div class="festival-buttons">
-                        <button class="btn btn-participate">Participar</button>
+                        <button onclick="window.location.href='https://forms.gle/NTTmPsCKeMAJawy46'" class="btn btn-participate">Participar</button>
                         <button class="btn btn-info">Más información</button>
                     </div>
                     <label class="selection-date">Selección de ganadores: 5 de Diciembre 2024</label>

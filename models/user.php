@@ -6,7 +6,7 @@
         private static $select = 'select user_name, user_full_name, user_photo from users order by user_full_name';
         private static $select_one = 'select user_name, user_full_name, user_photo from users where user_name = ?';
         private static $login = '
-        select nombre 
+        select nombre, correo
         from usuario 
         where correo = ? and contrasena = ?;
         ';
@@ -14,12 +14,17 @@
         private $name;
         private $full_name;
         private $photo;
+        private $email;
 
         public function get_name(){ return $this->name; }
         public function set_name($name){ $this->name = $name; }
 
         public function get_full_name(){ return $this->full_name; }
         public function set_full_name($full_name){ $this->full_name = $full_name; }
+
+        public function get_email(){ return $this->email; }
+        public function set_email($email){ $this->email = $email; }
+
 
         public function get_photo(){ return Config::$server_url.'/photos/users/'.$this->photo; }
         public function set_photo($photo){ $this->photo = $photo; }
@@ -33,17 +38,10 @@
             }
 
             //Arguments received
-            if (func_num_args() == 3) {
+            if (func_num_args() == 2) {
                 $args = func_get_args();
                 $this->name = $args[0];
-                $this->full_name = $args[1];
-                $this->photo = $args[2];
-            }
-
-            //Arguments received
-            if (func_num_args() == 1) {
-                $args = func_get_args();
-                $this->name = $args[0];
+                $this->email = $args[1];
             }
         }
         public static function get(){
@@ -83,9 +81,9 @@
             $command = $connection->prepare(self::$login);
             $command->bind_param('ss', $user_name, $password);
             $command->execute();
-            $command->bind_result($name);
+            $command->bind_result($name, $email);
             if ($command->fetch()){
-                $returnValue = new User($name);
+                $returnValue = new User($name, $email);
             }
             mysqli_stmt_close($command);
             $connection->close();

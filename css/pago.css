@@ -220,6 +220,8 @@ h2{
     height: 80px;
     border-radius: 11px;
     transition: 150ms;
+    display: flex;
+    justify-content: center;
 }
 
 .payment-button:hover{
@@ -444,3 +446,8 @@ h2{
     will-change: transform;
 }
 
+.payment-button img{
+    position: relative;
+    width: 80%;
+    height: 80%;
+}

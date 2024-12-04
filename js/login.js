@@ -4,15 +4,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 function setupButtons(){
+    const cindiev = document.getElementById('header-logo');
+    cindiev.addEventListener('click', ()=> {
+        window.location.href = 'index.php';
+    });
+
     const userButton = document.querySelector('.l');
     const adminButton = document.querySelector('.r');
+    if (userButton != null && adminButton !=null){
+        adminButton.addEventListener('click', () => {
+            goWhite();
+        });
+        userButton.addEventListener('click', () => {
+            goBlack();
+        });
+    }
+    const reg = document.querySelector('.register-type');
+    if (reg != null) {
+        reg.addEventListener('click', ()=>{
+            document.getElementById('reg').style.display ="flex"
+            document.getElementById('log').style.display ="none"
+        });
+    }
 
-    adminButton.addEventListener('click', () => {
-        goWhite();
-    });
-    userButton.addEventListener('click', () => {
-        goBlack();
-    });
+    const log = document.querySelector('.login-type');
+    if (log != null) {
+        log.addEventListener('click', ()=>{
+            document.getElementById('log').style.display ="flex"
+            document.getElementById('reg').style.display ="none"
+        });
+    }
+
+
 }
 
 function goWhite(){
@@ -27,6 +50,7 @@ function goWhite(){
 
     document.querySelector('.tentacle-left').style.filter = "invert(1)";
     document.querySelector('.tentacle-right').style.filter = "invert(1)";
+
     document.querySelector('.left-container').style.filter = "invert(1)";
 
     document.querySelector('.content-gradient').style.background = "#00000000";
@@ -43,9 +67,7 @@ function goWhite(){
     document.querySelector('.tei').style.color = "black";
     document.querySelector('.tpi').style.color = "black";
 
-
     r.style.setProperty('--hoverBorder', '#000');
-
 }
 
 function goBlack() {

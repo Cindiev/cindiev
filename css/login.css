@@ -107,6 +107,8 @@ form .text-input{
     color: var(--hoverBorder);
     font-size: 12pt;
     opacity: 60%;
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 #login-btn{

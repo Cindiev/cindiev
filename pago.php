@@ -19,7 +19,7 @@
 <!--1st Panel-->
                         <div class="purchase" id="purchase-container">
                             <div class="purchase-title">Resúmen</div>
-                            <img src="assets/movies/huerfanas.jpg">
+                            <img src="assets/movies/nocover.png">
                             <div class="purchase-movie">
                                 <div id="r-mtitle" class="purchase-movie-title">Las dos Huérfanas</div>
                                 <div id="r-mdetail" class="purchase-movie-details">60 min ESP</div>
@@ -52,11 +52,11 @@
                         <div class="payment" id="payment-container" style="display:none;">
                             <div class="payment-title">Seleccione su método de pago</div>
                             <div class="payment-buttons">
-                                <div class="payment-button"></div>
-                                <div class="payment-button"></div>
-                                <div class="payment-button"></div>
-                                <div class="payment-button"></div>
-                                <div class="payment-button"></div>
+                                <div class="payment-button"><img src="assets/svg/paypal.svg" alt=""></div>
+                                <div class="payment-button"><img src="assets/svg/mercado.svg" alt=""></div>
+                                <div class="payment-button"><img src="assets/svg/oxxo.svg" alt=""></div>
+                                <div class="payment-button"><img src="assets/svg/mastercard.svg" alt=""></div>
+                                <div class="payment-button"><img src="assets/svg/visa.svg" alt=""></div>
                                 <div class="payment-button"></div>
                                 <div class="payment-button"></div>
                                 <div class="payment-button"></div>
@@ -69,13 +69,15 @@
                                     <option value="Oxxo">Oxxo</option>
                                 </select>
                             </div>
-                            <div class="payment-mail">Cuenta: iadeb287@gmail.com</div>
+
+
+                            <div class="payment-mail">Cuenta: <?php if(isset($_SESSION['email'])) { echo $_SESSION['email']; } else{ echo "iade287@gmail.com"; } ?></div>
                             <button class="paybtn" id="continue-method">Continuar</button>
                         </div>
 <!--3rd Panel-->
                         <div class="completion" id="completion-container" style="display:none;">
                             <div class="completion-title">¡Compra Exitosa!</div>
-                            <img src="assets/movies/huerfanas.jpg">
+                            <img src="assets/movies/nocover.png">
                             <div id="movie-info" class="comp-movie">Las dos huérfanas <div>60 min ESP</div></div>
 
                             <div id="print" class="completion-details hover-effect">
@@ -89,7 +91,7 @@
                                 <div id="download-default" class="actions-title">Descargar Tickets</div>
                                 <img id="download-button" src="assets/svg/img.svg">
                             </div>
-                            <button id="endbtn">Finalizar</button>
+                            <button id="endbtn" onclick="window.location.href = `index.php`">Finalizar</button>
                         </div>
                     </div>
                     <div class="purchase-details">

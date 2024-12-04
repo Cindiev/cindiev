@@ -29,14 +29,27 @@ header{
     font-weight: bolder;
     font-size: 44pt;
     color: var(--red);
+    cursor: pointer;
+}#header-logo:hover{
+    color: var(--hoverBorder);
+    transition: 150ms;
 }
+
 #header-logo .highlight{
     color: #fff;
 }
 #header-icon{
     width: 80px;
     margin-left: 120px;
+    cursor: pointer;
+    transition: 150ms;
+
 }
+#header-icon:hover{
+    filter: invert(1);
+    transition: 150ms;
+}
+
 
 nav ul{
     list-style: none;
@@ -126,4 +139,46 @@ svg{
 
 .disabled-icon{
     opacity: 40%;
+}
+
+.buttons .btn.register{
+    background: var(--red);
+    color: white;
+    border: 1px solid #ffffff00;
+    border-radius: 8px;
+    transition: 150ms;
+}
+.buttons .btn.register:hover{
+    border: 1px solid #ffffff;
+    transition: 150ms;
+}
+
+.buttons .btn.login{
+    border: 1px solid #ffffff00;
+    transition: 150ms;
+}
+.buttons .btn.login:hover{
+    border: 1px solid #ffffff;
+    transition: 150ms;
+}
+
+.user-content {
+    position: relative;
+    color: white;
+    font-size: 14pt;
+    margin-right: 101px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+#logout{
+    width: 20px;
+    margin-left: 24px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 150ms;
+}
+#logout:hover{
+    opacity: 1;
+    transition: 150ms;
 }

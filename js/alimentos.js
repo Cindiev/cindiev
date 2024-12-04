@@ -50,7 +50,7 @@ function loadData() {
         document.getElementById('total-value').textContent = `Total: $${total}`;
     } else {
         alert('No se encontraron datos de tickets. Regresando...');
-        window.location.href = 'tickets.php';
+        window.location.href = 'agendar.php';
     }
 
     // Cargar los asientos seleccionados desde localStorage

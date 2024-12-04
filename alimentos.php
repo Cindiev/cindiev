@@ -151,7 +151,7 @@
                 </div>
                 <div class="panel-content">
                     <div class="movie-summary">
-                        <img src="assets/movies/huerfanas.jpg">
+                        <img src="assets/movies/nocover.png">
                         <div id="selected-title" class="summary-title"></div>
                         <div class="summary-details">60 min ESP</div>
                         <div id="selected-time" class="summary-date"></div>

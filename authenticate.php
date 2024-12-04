@@ -11,8 +11,8 @@
         session_start(); // start session
         // save user info in session
         $_SESSION['user-name'] =  $user->get_name();
-        $_SESSION['full-name'] = $user->get_full_name();
-        $_SESSION['photo'] = $user->get_photo();
+        $_SESSION['email'] =  $user->get_email();
+
         // redirect to index.php
         header('location:index.php');
     }else{
