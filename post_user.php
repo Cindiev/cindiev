@@ -1,5 +1,5 @@
 <?php
-    require_once('models/character.php');
+    require_once('models/user.php');
     require_once('config/config.php');
 
     // receive data
@@ -10,15 +10,18 @@
     $age = $_POST['age'];
 
     if ($password == $password2) {
-        // add
-        if (User::add($name, $race, $strength, $speed)){
-            header('Location:character.php');
+        if ($age >= 18) {
+            if (User::add($email, $name, $password, $age)){
+                header('Location:login.php?p=success');
+            }else{
+                echo 'Could not register user';
+            }
         }else{
-            echo 'Could not add character';
+            header('Location:login.php?p=errage');
         }
-
     }else{
-        echo "Error: Ambas contraseñas deben ser iguales";
+        header('Location:login.php?p=errpass');
+
     }
     
 ?>

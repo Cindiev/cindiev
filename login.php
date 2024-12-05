@@ -50,6 +50,7 @@
                                 <?php if(isset($_GET['error'])){ ?>
                                     <div class='error'>Acceso Denegado: correo o contraseña incorrectos</div>
                                 <?php } ?>
+
                                 <br>
                                 <button id="login-btn"  type="submit">Iniciar Sesión</button>
                             </form>
