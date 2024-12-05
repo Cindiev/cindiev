@@ -75,6 +75,27 @@
             return $returnValue;
         }
 
+        public static function add(){
+            if (func_num_args() == 4) {
+                $args = func_get_args();
+                $name = $args[0];
+                //$avatar = $args[1];
+                $race = $args[1];
+                $strength = $args[2];
+                $speed = $args[3];
+
+                $connection = MySqlConnection::get_connection();
+                $command = $connection->prepare(self::$insert);
+                //$command->bind_param('sssii', $name, $avatar, $race, $strength, $speed);
+                $command->bind_param('ssii', $name, $race, $strength, $speed);
+                $result = $command->execute();
+
+                mysqli_stmt_close($command);
+                $connection->close();
+                return $result;
+            }
+        }
+
         public static function authenticate($user_name, $password){
             $returnValue = null;
             $connection = MySqlConnection::get_connection();

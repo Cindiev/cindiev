@@ -74,13 +74,13 @@
                         <div id="login-panel">
 
                             <form method="post" action="post_user.php">
-                                <input class="text-input tei" placeholder="Correo electrónico" name="user-name" type="email" value="<?php if (isset($email)) { echo $email; } ?>"></input>
+                                <input class="text-input tei" placeholder="Correo electrónico" name="email" type="email" value="<?php if (isset($email)) { echo $email; } ?>"></input>
                                 <br>
-                                <input class="text-input tei" placeholder="Nombre" name="full-name" type="text"></input>
+                                <input class="text-input tei" placeholder="Nombre" name="name" type="text"></input>
                                 <br>
                                 <input class="text-input tpi" placeholder="Contraseña" name="password" type="password"></input>
                                 <br>
-                                <input class="text-input tpi" placeholder="Confirmar Contraseña" name="password" type="password"></input>
+                                <input class="text-input tpi" placeholder="Confirmar Contraseña" name="password2" type="password"></input>
                                 <br>
                                 <input class="text-input tpi" placeholder="Edad" name="age" type="number" max='100' min='18'></input>
                                 <div class="remember-container"><input type="checkbox" id="remember" name="remember-user" value="remember">Acepto los términos y condiciones</div>

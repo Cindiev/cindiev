@@ -29,9 +29,8 @@
                 </div>
                 <div class="floating-container">
                     Selecciona el día
-                    <div class="floating-selector">
-                        13 de Noviembre
-                    </div>
+                    <input type="date" min="2024-12-04" max="2024-12-18" class="floating-selector">
+                    </input>
                 </div>
             </div>
             <div class="movie-billboard-container" id="movies">
